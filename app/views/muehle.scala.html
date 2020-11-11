@@ -10,10 +10,11 @@ controller.status
 
 @main("Nine Men's Morris") {
 <div class="main-header">
-    <h1>Nine Men's Morris</h1>
+    <h1 id="nine_header">Nine Men's Morris</h1>
     <div class="navigation-bar">
         <a class="navigation-bar-item" href="/">HOME</a>
         <a class="navigation-bar-item" href="/game">GAME</a>
+        <a class="navigation-bar-item" href="/history">HISTORY</a>
         <a class="navigation-bar-item" href="https://github.com/MacFarmer/de.htwg.wt.muehle" target="_blank">
             This project on [GitHub] </a>
     </div>
@@ -119,7 +120,6 @@ controller.status
     <form action="/game/11" class="row">
         <input class="button2" type="submit" value="Place Stone at 12" />
     </form>
-    <br>
     <form action="/game/12" class="row">
         <input class="button2" type="submit" value="Place Stone at 13" />
     </form>
@@ -161,8 +161,8 @@ controller.status
     </form>
 </div>
 
-<div class="nav-home">
-    <br>
-    <a class="btn" href="/">Go Back to Homepage</a>
+<div class="center">
+    <a href="/" class="button3">Go Back to Homepage</a>
 </div>
+
 }
