@@ -1,26 +1,59 @@
 @()
 
 @main("Nine men's morris") {
+<div class="main-header">
+    <h1>Nine Men's Morris</h1>
+    <div class="navigation-bar">
+        <a class="navigation-bar-item" href="/">HOME</a>
+        <a class="navigation-bar-item" href="/game">GAME</a>
+        <a class="navigation-bar-item" href="https://github.com/MacFarmer/de.htwg.wt.muehle" target="_blank">
+            This project on [GitHub]</a>
+    </div>
+</div>
 
-<h1>History of Nine men's morris</h1>
+<div id="history">
+    <div class="textarea justify">
+    <h1>History of Nine Men's Morris</h1>
+
+        <p>
+        <h2>Here you can find more information about one of the oldest games of humankind: <b>Nine men's morris.</b></h2>
+        </p>
 
     <p>
-<h2>Here you can find more information about one of the oldest games of humankind: <b>Nine men's morris.</b></h2>
+        <br>Nine Men’s Morris is an ancient game, popular in Ancient Rome and the medieval period.
+        <br>No one really knows where and when the game originated.
+        <br>The oldest building that has a Nine Men’s Morris board carved into its stones is an Egyptian temple at Kurna, Egypt, which dates to roughly 1400 BCE.
+        <br>However, it is not known when the game board itself was carved into the Kurna temple’s roofing slabs; was it at the time of the construction or much later in history.
+        <br>There are many Nine Men’s Morris carved into various buildings’ stones through out the Roman Empire and in the seats of many medieval cathedrals.
+        <br>This game is known by many names, such as Mill or Windmill, most probably, because the shape of the board looks like a windmill, and Merrels, from the Latin word merellus, which means “gaming piece”.
+        <br>The name Nine Men’s Morris seems to have been originated by Shakespeare in his play, A Midsummer Night’s Dream (Act II, Scene I), in which Titania refers to such a board by saying, “The nine men’s morris is filled up with mud”.
+        <br>The rules of the game are well known, mostly because the game has been played continuously in Europe since the Roman period.
+
+        <figure id="gallery">
+            <figcaption><b>Nine Men’s Morris gallery:</b></figcaption>
+
+            <figure>
+                <img src=@routes.Assets.versioned("images/Mill_history.png") width="600" height="400" alt="Nine Men’s Morris - Croatia">
+                <figcaption>Nine Men’s Morris, carved on the floor of the platform between the Bell Tower and the Dome of Diocletian’s Mausoleum in Split, Croatia. Photo: Helen Goodchild, June 29, 2009.</figcaption>
+            </figure>
+
+            <figure>
+                <img src=@routes.Assets.versioned("images/Mill_history_2.png") width="600" height="400" alt="Nine Men’s Morris - Turkey">
+                <figcaption>Nine Men’s Morris carved into stone in the ruins of Byzantine church, St. John’s Basilica, Selçuk, Turkey. Photo: Tolka Rover, October 22, 2009.</figcaption>
+            </figure>
+
+            <figure>
+                <img src=@routes.Assets.versioned("images/Mill_history_3.png") width="400" height="600" alt="Nine Men’s Morris - Russia">
+                <figcaption>Wooden Nine Men’s Morris from medieval Velikiy Novgorod, Russia. Novgorod State United Museum. Photo: Professor Michael Fuller, St. Louis Community College, 2006.</figcaption>
+            </figure>
+        </figure>
+
     </p>
-
-<p>
-    <br>Nine Men’s Morris is an ancient game, popular in Ancient Rome and the medieval period.
-    <br>No one really knows where and when the game originated.
-    <br>The oldest building that has a Nine Men’s Morris board carved into its stones is an Egyptian temple at Kurna, Egypt, which dates to roughly 1400 BCE.
-    <br>However, it is not known when the game board itself was carved into the Kurna temple’s roofing slabs; was it at the time of the construction or much later in history.
-    <br>There are many Nine Men’s Morris carved into various buildings’ stones through out the Roman Empire and in the seats of many medieval cathedrals.
-    <br>This game is known by many names, such as Mill or Windmill, most probably, because the shape of the board looks like a windmill, and Merrels, from the Latin word merellus, which means “gaming piece”.
-    <br>The name Nine Men’s Morris seems to have been originated by Shakespeare in his play, A Midsummer Night’s Dream (Act II, Scene I), in which Titania refers to such a board by saying, “The nine men’s morris is filled up with mud”.
-    <br>The rules of the game are well known, mostly because the game has been played continuously in Europe since the Roman period.
-</p>
-
-<div align="left">
-    <br>
-    <a class="btn" href="/">Go Back to Homepage</a>
+    </div>
 </div>
+
+<div class="center">
+    <a href="/" class="button3">Go Back to Homepage</a>
+</div>
+
 }

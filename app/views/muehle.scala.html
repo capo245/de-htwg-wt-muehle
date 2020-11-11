@@ -1,148 +1,168 @@
 @(controller: de.htwg.se.muehle.controller.controllerComponent.IController)
 
-    @grid = @{
-        controller.gridToString
-    }
+@grid = @{
+controller.gridToString
+}
 
-    @status = @{
-        controller.status
-    }
+@status = @{
+controller.status
+}
 
-    @main("Nine men's morris") {
-        <div align="center">
-            <br>
-            <form action="/new">
-                <input type="submit" value="Start new game" />
-            </form>
-            <form action="/undo">
-                <input type="submit" value="Undo" />
-            </form>
-            <form action="/redo">
-                <input type="submit" value="Redo" />
-            </form>
+@main("Nine Men's Morris") {
+<div class="main-header">
+    <h1>Nine Men's Morris</h1>
+    <div class="navigation-bar">
+        <a class="navigation-bar-item" href="/">HOME</a>
+        <a class="navigation-bar-item" href="/game">GAME</a>
+        <a class="navigation-bar-item" href="https://github.com/MacFarmer/de.htwg.wt.muehle" target="_blank">
+            This project on [GitHub] </a>
+    </div>
+</div>
+<div class="commands">
+    <br>
+    <form action="/new" class="command">
+        <input class="button2" type="submit" value="Start new game" />
+    </form>
+    <br>
+    <form action="/undo" class="command">
+        <input class="button2" type="submit" value="Undo" />
+    </form>
+    <form action="/redo" class="command">
+        <input class="button2" type="submit" value="Redo" />
+    </form>
+</div>
+<div class="container">
+    <div class="gamecontainer">
+        <div>
+                    <span class="status">
+                        @status
+                    </span>
         </div>
-
-        <div align="center" class="gamecontainer">
-            <div align="left">
-                <span>
-                    @status
-                </span>
-            </div>
-            <div align="center">
-                <span>
-                @grid.slice(0, 13)
-                </span>
-            </div>
-            <div align="center">
-                <span>
-                @grid.slice(14, 27)
-                </span>
-            </div>
-            <div align="center">
-                <span>
-                @grid.slice(28, 41)
-                </span>
-            </div>
-            <div align="center">
-                <span>
-                @grid.slice(42, 55)
-                </span>
-            </div>
-            <div align="center">
-                <span>
-                @grid.slice(56, 69)
-                </span>
-            </div>
-            <div align="center">
-                <span>
-                @grid.slice(70, 83)
-                </span>
-            </div>
-            <div align="center">
-                <span>
-                @grid.slice(84, 97)
-                </span>
-            </div>
+        <div>
+                    <span class="grid">
+                    @grid.slice(0, 13)
+                    </span>
         </div>
-
-        <div align="center">
-            <br>
-            <form action="/game/0">
-                <input type="submit" value="Place Stone at 1" />
-            </form>
-            <form action="/game/1">
-                <input type="submit" value="Place Stone at 2" />
-            </form>
-            <form action="/game/2">
-                <input type="submit" value="Place Stone at 3" />
-            </form>
-            <form action="/game/3">
-                <input type="submit" value="Place Stone at 4" />
-            </form>
-            <form action="/game/4">
-                <input type="submit" value="Place Stone at 5" />
-            </form>
-            <form action="/game/5">
-                <input type="submit" value="Place Stone at 6" />
-            </form>
-            <form action="/game/6">
-                <input type="submit" value="Place Stone at 7" />
-            </form>
-            <form action="/game/7">
-                <input type="submit" value="Place Stone at 8" />
-            </form>
-            <form action="/game/8">
-                <input type="submit" value="Place Stone at 9" />
-            </form>
-            <form action="/game/9">
-                <input type="submit" value="Place Stone at 10" />
-            </form>
-            <form action="/game/10">
-                <input type="submit" value="Place Stone at 11" />
-            </form>
-            <form action="/game/11">
-                <input type="submit" value="Place Stone at 12" />
-            </form>
-            <form action="/game/12">
-                <input type="submit" value="Place Stone at 13" />
-            </form>
-            <form action="/game/13">
-                <input type="submit" value="Place Stone at 14" />
-            </form>
-            <form action="/game/14">
-                <input type="submit" value="Place Stone at 15" />
-            </form>
-            <form action="/game/15">
-                <input type="submit" value="Place Stone at 16" />
-            </form>
-            <form action="/game/16">
-                <input type="submit" value="Place Stone at 17" />
-            </form>
-            <form action="/game/17">
-                <input type="submit" value="Place Stone at 18" />
-            </form>
-            <form action="/game/18">
-                <input type="submit" value="Place Stone at 19" />
-            </form>
-            <form action="/game/19">
-                <input type="submit" value="Place Stone at 20" />
-            </form>
-            <form action="/game/20">
-                <input type="submit" value="Place Stone at 21" />
-            </form>
-            <form action="/game/21">
-                <input type="submit" value="Place Stone at 22" />
-            </form>
-            <form action="/game/22">
-                <input type="submit" value="Place Stone at 23" />
-            </form>
-            <form action="/game/23">
-                <input type="submit" value="Place Stone at 24" />
-            </form>
+        <div>
+                    <span class="grid">
+                    @grid.slice(14, 27)
+                    </span>
         </div>
-
-        <div align="center">
-            <br>
-            <a class="btn" href="/">Go Back to Homepage</a>
+        <div>
+                    <span class="grid">
+                    @grid.slice(28, 41)
+                    </span>
         </div>
-    }
+        <div>
+                    <span class="grid row_middel">
+                    @grid.slice(42, 47)
+                    &nbsp;
+                    @grid.slice(50, 55)
+                    </span>
+        </div>
+        <div>
+                    <span class="grid">
+                    @grid.slice(56, 69)
+                    </span>
+        </div>
+        <div>
+                    <span>
+                    @grid.slice(70, 83)
+                    </span>
+        </div>
+        <div>
+                    <span>
+                    @grid.slice(84, 97)
+                    </span>
+        </div>
+    </div>
+</div>
+
+<div class="buttons">
+    <br>
+    <form action="/game/0" class="row">
+        <input class="button2" type="submit" value="Place Stone at 1" />
+    </form>
+    <form action="/game/1" class="row">
+        <input class="button2"  type="submit" value="Place Stone at 2" />
+    </form>
+    <form action="/game/2" class="row">
+        <input class="button2"  type="submit" value="Place Stone at 3" />
+    </form>
+    <br>
+    <form action="/game/3" class="row">
+        <input class="button2"  type="submit" value="Place Stone at 4" />
+    </form>
+    <form action="/game/4" class="row">
+        <input class="button2"  type="submit" value="Place Stone at 5" />
+    </form>
+    <form action="/game/5" class="row">
+        <input class="button2"  type="submit" value="Place Stone at 6" />
+    </form>
+    <br>
+    <form action="/game/6" class="row">
+        <input class="button2" type="submit" value="Place Stone at 7" />
+    </form>
+    <form action="/game/7" class="row">
+        <input class="button2" type="submit" value="Place Stone at 8" />
+    </form>
+    <form action="/game/8" class="row">
+        <input class="button2" type="submit" value="Place Stone at 9" />
+    </form>
+    <br>
+    <form action="/game/9" class="row">
+        <input class="button2" type="submit" value="Place Stone at 10" />
+    </form>
+    <form action="/game/10" class="row">
+        <input class="button2" type="submit" value="Place Stone at 11" />
+    </form>
+    <form action="/game/11" class="row">
+        <input class="button2" type="submit" value="Place Stone at 12" />
+    </form>
+    <br>
+    <form action="/game/12" class="row">
+        <input class="button2" type="submit" value="Place Stone at 13" />
+    </form>
+    <form action="/game/13" class="row">
+        <input class="button2" type="submit" value="Place Stone at 14" />
+    </form>
+    <form action="/game/14" class="row">
+        <input class="button2" type="submit" value="Place Stone at 15" />
+    </form>
+    <br>
+    <form action="/game/15" class="row">
+        <input class="button2" type="submit" value="Place Stone at 16" />
+    </form>
+    <form action="/game/16" class="row">
+        <input class="button2" type="submit" value="Place Stone at 17" />
+    </form>
+    <form action="/game/17" class="row">
+        <input class="button2" type="submit" value="Place Stone at 18" />
+    </form>
+    <br>
+    <form action="/game/18" class="row">
+        <input class="button2" type="submit" value="Place Stone at 19" />
+    </form>
+    <form action="/game/19" class="row">
+        <input class="button2" type="submit" value="Place Stone at 20" />
+    </form>
+    <form action="/game/20" class="row">
+        <input class="button2" type="submit" value="Place Stone at 21" />
+    </form>
+    <br>
+    <form action="/game/21" class="row">
+        <input class="button2" type="submit" value="Place Stone at 22" />
+    </form>
+    <form action="/game/22" class="row">
+        <input class="button2" type="submit" value="Place Stone at 23" />
+    </form>
+    <form action="/game/23" class="row">
+        <input class="button2" type="submit" value="Place Stone at 24" />
+    </form>
+</div>
+
+<div class="nav-home">
+    <br>
+    <a class="btn" href="/">Go Back to Homepage</a>
+</div>
+}

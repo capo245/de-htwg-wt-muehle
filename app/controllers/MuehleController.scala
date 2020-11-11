@@ -15,7 +15,7 @@ class MuehleController @Inject()(cc: ControllerComponents) extends AbstractContr
   }
 
   def muehle = Action {
-    Ok(muehleAsText)
+    Ok(views.html.muehle(gameController))
   }
 
   def place(pos:Int) = Action {
@@ -25,7 +25,7 @@ class MuehleController @Inject()(cc: ControllerComponents) extends AbstractContr
 
   def newGame = Action {
     gameController.newGame()
-    Ok(muehleAsText)
+    Ok(views.html.muehle(gameController))
   }
 
   def undo = Action {

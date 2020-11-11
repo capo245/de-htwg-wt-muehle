@@ -1,0 +1,178 @@
+h1 {
+    text-align: center;
+    font-size: 60px;
+    color: rgb(153,68,0);
+}
+
+h2 {
+    margin-left: auto;
+    font-size: 30px;
+}
+.main-header {
+    background: khaki;
+}
+.gamecontainer {
+    text-align: center;
+    height: 100%;
+    margin: 1em;
+    padding: 0.5em;
+    display: inline-block;
+    background: #CBB24D;
+    font-family: Consolas;
+    font-size: 40px;
+    color: black;
+    border: 3px solid black;
+}
+
+.container {
+    text-align: center;
+}
+.gamecontainer div {
+    text-align: center;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.nav-home {
+    text-align: left;
+}
+
+.commands {
+    text-align: center;
+}
+.command {
+    display: inline-block;
+    margin: 0.5em 9em;
+}
+
+.row {
+    display: inline-block;
+    margin: 0.5em;
+}
+.buttons input {
+    text-align: center;
+    width: 10em;
+}
+
+img {
+    border-radius: 8px;
+}
+
+.textarea {
+    font-size: 4.5mm;
+    font-family: Calibri;
+}
+
+.navigation-bar {
+    align-items: center;
+    border-bottom: 2px solid gray;
+}
+
+a:link {
+    color: dimgray;
+}
+
+a:visited {
+    color: dimgray;
+}
+
+a:hover {
+    color: lightskyblue;
+}
+
+a:active {
+    color: lightskyblue;
+}
+
+.navigation-bar-item {
+    text-decoration-color: gray;
+    font-family: "Bahnschrift";
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 1em;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+a.button1{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #4eb5f1;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#4eb5f1;
+    text-align:center;
+    transition: all 0.2s;
+}
+a.button1:hover{
+    color:#FFFFFF;
+    background-color:#4eb5f1;
+}
+
+a.button2{
+    display:inline-block;
+    border:0.1em solid lightslategray;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#4eb5f1;
+    text-align:center;
+    transition: all 0.2s;
+}
+a.button2:hover{
+    color:#FFFFFF;
+    background-color:#4eb5f1;
+}
+
+a.button3{
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color:#4eb5f1;
+    text-align:center;
+    transition: all 0.2s;
+}
+a.button3:hover{
+    background-color:#4095c6;
+}
+.justify {
+    text-align: justify;
+}
+.center {
+    text-align: center;
+}
+input.button2{
+     display:inline-block;
+     border:0.1em solid black;
+     padding:0.3em 1.2em;
+     margin:0 0.3em 0.3em 0;
+     border-radius:2em;
+     box-sizing: border-box;
+     text-decoration:none;
+     font-family:'Roboto',sans-serif;
+     font-weight:300;
+     color:black;
+     text-align:center;
+     transition: all 0.2s;
+ }
+input.button2:hover{
+    color:#FFFFFF;
+    background-color:#4eb5f1;
+}
