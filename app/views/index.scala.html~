@@ -73,7 +73,9 @@
 
 <div class="main-footer">
     <br>
-    <p>&copy Copyright by Marc Freibauer and Maurice Gutmann</p>
+    <hr>
+    <br>
+    <f1>&copy Copyright by Marc Freibauer and Maurice Gutmann</f1>
 </div>
 
 }
