@@ -18,7 +18,7 @@ h1 {
     /*wird überschrieben */
 
     font: bold 4em Helvetica, Arial, sans-serif;
-    margin: 0.3em 0;
+    margin: 0.3 em;
     padding: 0;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -26,6 +26,8 @@ h1 {
 }
 
 #nine_header {
+        top: 0px;
+        margin-top: 0px;
     	font: bold 4em Bangers, sans-serif;
         letter-spacing: 0.1em;
         background-image: linear-gradient(white 45%, black 55%);
@@ -36,6 +38,8 @@ h2 {
     font-size: 30px;
 }
 .main-header {
+    top: 0px;
+    margin-top: 0px;
     background-color: #DAA520;
     background-image: linear-gradient(to bottom, rgba(218,165,32,1), rgba(245,222,179,1));
 }
@@ -253,4 +257,191 @@ figure.mitte figcaption {
 #gallery > figcaption {
 	grid-column: 1 / -1;
 	text-align: center;
+}
+
+/*Game-Buttons*/
+.gg-play-button {
+    box-sizing: border-box;
+    position: center;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    color: green;
+}
+.gg-play-button::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 0;
+    height: 10px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 6px solid;
+    top: 6px;
+    left: 9px
+}
+.gg-push-down {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 2px;
+    height: 16px;
+    background: currentColor;
+}
+.gg-push-down::after,
+.gg-push-down::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    border-bottom: 2px solid;
+    bottom: -5px;
+    left: -5px
+}
+.gg-push-down::after {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid;
+    transform: rotate(45deg);
+    left: -3px;
+    bottom: 0
+}
+.gg-redo {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 14px;
+    height: 14px;
+    border: 2px solid;
+    border-right-color: transparent;
+    border-radius: 100px
+}
+.gg-redo::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    top: -3px;
+    right: -1px;
+    transform: rotate(68deg)
+}
+.gg-undo {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 14px;
+    height: 14px;
+    border: 2px solid;
+    border-left-color: transparent;
+    border-radius: 100px
+}
+.gg-undo::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    top: -3px;
+    left: -1px;
+    transform: rotate(-68deg)
+}
+.gg-close-o {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    border-radius: 40px
+}
+.gg-close-o::after,
+.gg-close-o::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background: currentColor;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    top: 8px;
+    left: 3px
+}
+.gg-close-o::after {
+    transform: rotate(-45deg)
+}
+.gg-software-upload {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 16px;
+    height: 6px;
+    border: 2px solid;
+    border-top: 0;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    margin-top: 8px
+}
+.gg-software-upload::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid;
+    border-top: 2px solid;
+    transform: rotate(45deg);
+    left: 2px;
+    bottom: 4px
+}
+.gg-software-upload::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+    left: 5px;
+    bottom: 3px
+}
+
+.btn-group .btn {
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+  background-color:#DAA520
+}
+.btn-group .btn:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+.btn-group .btn:hover {
+  color:#FFFFFF;
+  background-color:#8B4513;
+}
+
+.btn .gg-software-upload{
+    border-right: solid;
 }

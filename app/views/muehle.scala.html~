@@ -42,7 +42,7 @@ controller.status
     <button class="btn"><i class="gg-push-down"></i>Save</button>
     <button class="btn"><i class="gg-software-upload"></i>Load</button>
 <div/>
-
+<br>
 <div class="container">
     <div class="gamecontainer">
         <div>

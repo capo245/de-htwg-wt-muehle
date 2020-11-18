@@ -57,4 +57,11 @@
     <br>
     <a href="/" class="button3">Go Back to Homepage</a>
 </div>
+
+<div class="main-footer">
+    <br>
+    <br>
+    <f1>&copy Copyright by Marc Freibauer and Maurice Gutmann</f1>
+</div>
+
 }
