@@ -37,6 +37,14 @@ class MuehleController @Inject()(cc: ControllerComponents) extends AbstractContr
     gameController.redo
     Ok(views.html.muehle(gameController))
   }
+  def save = Action {
+    gameController.saveGame()
+    Ok(views.html.muehle(gameController))
+  }
+  def load = Action {
+    gameController.loadGame()
+    Ok(views.html.muehle(gameController))
+  }
   def history= Action {
     Ok(views.html.history())
   }
