@@ -34,145 +34,134 @@ controller.status
     </form>
 </div>-->
 
-<div class="btn-group">
-    <button class="btn"><i class="gg-play-button"></i>Start new Game</button>
-    <button class="btn"><i class="gg-undo"></i>Undo</button>
-    <button class="btn"><i class="gg-redo"></i>Redo</button>
-    <button class="btn"><i class="gg-close-o"></i>Quit</button>
-    <button class="btn"><i class="gg-push-down"></i>Save</button>
-    <button class="btn"><i class="gg-software-upload"></i>Load</button>
-<div/>
+<!--    <div class="container">-->
+<!--        <div class="row align-items-center">-->
+<!--            <div class="col">-->
+<!--                <div class="text-center">-->
+<!--                <div class="btn-group col mb-4" role="group">-->
+<!--                    <a href="/new" class="btn"><i class="gg-play-button"></i>Start new Game</a>-->
+<!--                    <a href="/undo" class="btn"><i class="gg-undo"></i>Undo</a>-->
+<!--                    <a href="/redo" class="btn"><i class="gg-redo"></i>Redo</a>-->
+<!--                    <a class="btn"><i class="gg-close-o"></i>Quit</a>       TODO: href="" fehlt für drei Buttons
+<!--                    <a class="btn"><i class="gg-push-down"></i>Save</a>-->
+<!--                    <a class="btn"><i class="gg-software-upload"></i>Load</a>-->
+<!--                    <div/>-->
+<!--                    <div/>-->
+<!--            <div/>-->
+<!--        <div/>-->
+<!--    <div/>-->
+
+<div class="text-center">
+     <div class="btn-group btn-group-justified" role="group" aria-label="...">
+          <div class="text-center">
+              <div class="buttons mt-5">
+               <div class="btn-group col mb-3" role="group">
+                   <a href="/new" <i class="btn btn-default"></i>Start new Game <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-controller" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                   <path fill-rule="evenodd" d="M11.119 2.693c.904.19 1.75.495 2.235.98.407.408.779 1.05 1.094 1.772.32.733.599 1.591.805 2.466.206.875.34 1.78.364 2.606.024.815-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773a11.307 11.307 0 0 1-.739-.809c-.126-.147-.25-.291-.368-.422-.728-.804-1.597-1.527-3.224-1.527-1.627 0-2.496.723-3.224 1.527-.119.131-.242.275-.368.422-.243.283-.494.576-.739.81-.398.378-.877.705-1.513.772a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772.486-.485 1.331-.79 2.235-.98.932-.196 2.03-.292 3.119-.292 1.089 0 2.187.096 3.119.292zm-6.032.979c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a13.748 13.748 0 0 0-.748 2.295 12.351 12.351 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.505C4.861 9.97 5.978 9.026 8 9.026s3.139.943 3.965 1.855c.164.182.307.35.44.505.214.25.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.354 12.354 0 0 0-.339-2.406 13.753 13.753 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27-1.036 0-2.063.091-2.913.27z"/>
+                        <path d="M11.5 6.026a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1 1a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm2 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1 1a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-7-2.5h1v3h-1v-3z"/>
+                        <path d="M3.5 6.526h3v1h-3v-1zM3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .258.966l-1.932.518a.5.5 0 0 1-.612-.354zm9.976 0a.5.5 0 0 0-.353-.613l-1.932-.518a.5.5 0 1 0-.259.966l1.932.518a.5.5 0 0 0 .612-.354z"/>
+                        </svg></a>
+                   <a href="/undo" <i class="btn btn-default"></i>Undo <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                   <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm9.5 8.5a.5.5 0 0 0 0-1H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5z"/>
+               </svg></a>
+                   <a href="/redo" <i class="btn btn-default"></i>Redo <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                   <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm2.5 8.5a.5.5 0 0 1 0-1h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5z"/>
+               </svg></a>
+               </div>
+               </div>
+          </div>
+     </div>
+</div>
 
 <div class="container">
-    <div class="gamecontainer">
-        <div>
-                    <span class="status">
+<div class="row">
+    <div class="col">
+        <div class="col">
+            <div class="gamecontainer col">
+                <div>
+                        <span class="status">
                         @status
-                    </span>
-        </div>
-        <div>
-                    <span class="grid">
-                    @grid.slice(0, 13)
-                    </span>
-        </div>
-        <div>
-                    <span class="grid">
-                    @grid.slice(14, 27)
-                    </span>
-        </div>
-        <div>
-                    <span class="grid">
-                    @grid.slice(28, 41)
-                    </span>
-        </div>
-        <div>
-                    <span class="grid row_middel">
-                    @grid.slice(42, 47)
-                    &nbsp;
-                    @grid.slice(50, 55)
-                    </span>
-        </div>
-        <div>
-                    <span class="grid">
-                    @grid.slice(56, 69)
-                    </span>
-        </div>
-        <div>
-                    <span>
-                    @grid.slice(70, 83)
-                    </span>
-        </div>
-        <div>
-                    <span>
-                    @grid.slice(84, 97)
-                    </span>
+                        </span>
+                </div>
+                <div>
+                        <span class="grid col">
+                        @grid.slice(0, 13)
+                        </span>
+                </div>
+                <div>
+                        <span class="grid">
+                        @grid.slice(14, 27)
+                        </span>
+                </div>
+                <div>
+                        <span class="grid">
+                        @grid.slice(28, 41)
+                        </span>
+                </div>
+                <div>
+                        <span class="grid row_middel">
+                            @grid.slice(42, 47)
+                                &nbsp;
+                            @grid.slice(50, 55)
+                        </span>
+                </div>
+                <div>
+                        <span class="grid">
+                        @grid.slice(56, 69)
+                        </span>
+                </div>
+                <div>
+                        <span>
+                        @grid.slice(70, 83)
+                        </span>
+                </div>
+                <div>
+                        <span>
+                        @grid.slice(84, 97)
+                        </span>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="buttons">
-    <br>
-    <form action="/game/0" class="row">
-        <input class="button2" type="submit" value="Place Stone at 1" />
-    </form>
-    <form action="/game/1" class="row">
-        <input class="button2"  type="submit" value="Place Stone at 2" />
-    </form>
-    <form action="/game/2" class="row">
-        <input class="button2"  type="submit" value="Place Stone at 3" />
-    </form>
-    <br>
-    <form action="/game/3" class="row">
-        <input class="button2"  type="submit" value="Place Stone at 4" />
-    </form>
-    <form action="/game/4" class="row">
-        <input class="button2"  type="submit" value="Place Stone at 5" />
-    </form>
-    <form action="/game/5" class="row">
-        <input class="button2"  type="submit" value="Place Stone at 6" />
-    </form>
-    <br>
-    <form action="/game/6" class="row">
-        <input class="button2" type="submit" value="Place Stone at 7" />
-    </form>
-    <form action="/game/7" class="row">
-        <input class="button2" type="submit" value="Place Stone at 8" />
-    </form>
-    <form action="/game/8" class="row">
-        <input class="button2" type="submit" value="Place Stone at 9" />
-    </form>
-    <br>
-    <form action="/game/9" class="row">
-        <input class="button2" type="submit" value="Place Stone at 10" />
-    </form>
-    <form action="/game/10" class="row">
-        <input class="button2" type="submit" value="Place Stone at 11" />
-    </form>
-    <form action="/game/11" class="row">
-        <input class="button2" type="submit" value="Place Stone at 12" />
-    </form>
-    <form action="/game/12" class="row">
-        <input class="button2" type="submit" value="Place Stone at 13" />
-    </form>
-    <form action="/game/13" class="row">
-        <input class="button2" type="submit" value="Place Stone at 14" />
-    </form>
-    <form action="/game/14" class="row">
-        <input class="button2" type="submit" value="Place Stone at 15" />
-    </form>
-    <br>
-    <form action="/game/15" class="row">
-        <input class="button2" type="submit" value="Place Stone at 16" />
-    </form>
-    <form action="/game/16" class="row">
-        <input class="button2" type="submit" value="Place Stone at 17" />
-    </form>
-    <form action="/game/17" class="row">
-        <input class="button2" type="submit" value="Place Stone at 18" />
-    </form>
-    <br>
-    <form action="/game/18" class="row">
-        <input class="button2" type="submit" value="Place Stone at 19" />
-    </form>
-    <form action="/game/19" class="row">
-        <input class="button2" type="submit" value="Place Stone at 20" />
-    </form>
-    <form action="/game/20" class="row">
-        <input class="button2" type="submit" value="Place Stone at 21" />
-    </form>
-    <br>
-    <form action="/game/21" class="row">
-        <input class="button2" type="submit" value="Place Stone at 22" />
-    </form>
-    <form action="/game/22" class="row">
-        <input class="button2" type="submit" value="Place Stone at 23" />
-    </form>
-    <form action="/game/23" class="row">
-        <input class="button2" type="submit" value="Place Stone at 24" />
-    </form>
-</div>
-
-<div class="center">
-    <a href="/" class="button3">Go Back to Homepage</a>
-</div>
+    <div class="col">
+        <div class="buttons mt-5">
+            <div class="btn-group col mb-4" role="group">
+                <a href="/game/0" class="btn btn-outline-dark col-md-3"> 1</a>
+                <a href="/game/1" class="btn btn-outline-dark col-md-3"> 2</a>
+                <a href="/game/2" class="btn btn-outline-dark col-md-3"> 3</a>
+                <a href="/game/3" class="btn btn-outline-dark col-md-3"> 4</a>
+            </div>
+            <div class="btn-group col mb-4" role="group">
+                <a href="/game/4" class="btn btn-outline-dark col-md-3"> 5</a>
+                <a href="/game/5" class="btn btn-outline-dark col-md-3"> 6</a>
+                <a href="/game/6" class="btn btn-outline-dark col-md-3"> 7</a>
+                <a href="/game/7" class="btn btn-outline-dark col-md-3"> 8</a>
+            </div>
+            <div class="btn-group col mb-4" role="group">
+                <a href="/game/8" class="btn btn-outline-dark col-md-3"> 9</a>
+                <a href="/game/9" class="btn btn-outline-dark col-md-3">10</a>
+                <a href="/game/10" class="btn btn-outline-dark col-md-3">11</a>
+                <a href="/game/11" class="btn btn-outline-dark col-md-3">12</a>
+            </div>
+            <div class="btn-group col mb-4" role="group">
+                <a href="/game/12" class="btn btn-outline-dark col-md-3">13</a>
+                <a href="/game/13" class="btn btn-outline-dark col-md-3">14</a>
+                <a href="/game/14" class="btn btn-outline-dark col-md-3">15</a>
+                <a href="/game/15" class="btn btn-outline-dark col-md-3">16</a>
+            </div>
+            <div class="btn-group col mb-4" role="group">
+                <a href="/game/16" class="btn btn-outline-dark col-md-3">17</a>
+                <a href="/game/17" class="btn btn-outline-dark col-md-3">18</a>
+                <a href="/game/18" class="btn btn-outline-dark col-md-3">19</a>
+                <a href="/game/19" class="btn btn-outline-dark col-md-3">20</a>
+            </div>
+            <div class="btn-group col mb-4" role="group">
+                <a href="/game/20" class="btn btn-outline-dark col-md-3">21</a>
+                <a href="/game/21" class="btn btn-outline-dark col-md-3">22</a>
+                <a href="/game/22" class="btn btn-outline-dark col-md-3">23</a>
+                <a href="/game/23" class="btn btn-outline-dark col-md-3">24</a>
+            </div>
+        </div>
+    </div>
 }
