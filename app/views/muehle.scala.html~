@@ -104,7 +104,7 @@ controller.status
     <div class="col">
         <div class="buttons mt-5">
             <div class="btn-group col mb-4" role="group">
-                <a href="/game/0" class="btn btn-outline-dark col-md-3" id="button1"> 1</a>
+                <a href="/game/0" class="btn btn-outline-dark col-md-3"> 1</a>
                 <a href="/game/1" class="btn btn-outline-dark col-md-3"> 2</a>
                 <a href="/game/2" class="btn btn-outline-dark col-md-3"> 3</a>
                 <a href="/game/3" class="btn btn-outline-dark col-md-3"> 4</a>
