@@ -5,18 +5,18 @@
     "players" : [ {
       "name" : "Marc",
       "color" : "W",
-      "placed" : 2,
+      "placed" : 4,
       "stones" : 9,
       "mills" : 0
     }, {
       "name" : "Maurice",
       "color" : "B",
-      "placed" : 1,
+      "placed" : 3,
       "stones" : 9,
       "mills" : 0
     } ],
     "grid" : {
-      "filled" : "OWOOBOOWOOOOOOOOOOOOOOOO"
+      "filled" : "WBOBWOWOOOOBOOOWOOOOOOOO"
     }
   }
 }
