@@ -163,14 +163,35 @@ function connectWebSocket() {
             init_Buttons()
         }
     };
+}
 
-    //websocket.send(data);
-    //websocket.close();
+function changeColor()
+{
+    $('#l6DnU6HXv').on("click", function() {
+        $('#l6DnU6HXv').css({ fill: "#000000" });
+    });
+
+    $('#b2ErXBqKt7').on("click", function() {
+        $('#b2ErXBqKt7').css({ fill: "#ffaa11" });
+    });
+
+    $('#a4uE0zCMG1').on("click", function() {
+        $('#a4uE0zCMG1').css({ fill: "#ffaa11" });
+    });
+
+    $('#c4w1PI0rF0').on("click", function() {
+        $('#c4w1PI0rF0').css({ fill: "#000000" });
+    });
+
+    $('#a1yjNcWntD').on("click", function() {
+        $('#a1yjNcWntD').css({ fill: "#000000" });
+    });
 }
 
 $(document).ready(function () {
     loadJson();
     connectWebSocket();
+    changeColor();
     $(".loading").show();
     $(".loaded_after_5sec").hide();
 }) ;
