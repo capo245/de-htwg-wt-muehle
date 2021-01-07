@@ -49,6 +49,7 @@
 </template>
 
 <script>
+
 function placeColoredStone() {
     changeColor();
 
