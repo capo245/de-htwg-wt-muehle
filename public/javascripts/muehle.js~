@@ -306,7 +306,7 @@ function changeColor()
 $(document).ready(function () {
     loadJson();
     connectWebSocket();
-    placeColoredStone();
+    changeColor();
     $(".loading").show();
     $(".loaded_after_5sec").hide();
 }) ;
