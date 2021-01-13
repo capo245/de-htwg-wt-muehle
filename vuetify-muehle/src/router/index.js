@@ -41,7 +41,14 @@ const routes = [
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ '../views/GitHub.vue')
-    }
+    },
+
+    {
+      // This is a hack to use :to tag for absolute paths.
+      path: "/http*",
+      beforeEnter: to => {
+        window.open(to.fullPath.substring(1), '_blank');}
+    },
 ]
 
 const router = new VueRouter({

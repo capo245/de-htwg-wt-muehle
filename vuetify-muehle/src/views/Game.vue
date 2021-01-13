@@ -3,7 +3,6 @@
     <ButtonGroup/>
     <GameField/>
     <Footer/>
-
   </div>
 </template>
 

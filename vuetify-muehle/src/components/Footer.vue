@@ -8,12 +8,13 @@
       no-gutters
     >
         <v-btn
-          v-for="icon in icons"
-          :key="icon"
+          v-for="item in items"
+          :key="item.title"
+          :to="item.to"
           class="mx-4 white--text"
         >
           <v-icon size="24px">
-            {{ icon }}
+            {{ item.icon }}
           </v-icon>
         </v-btn>
       <v-col
@@ -29,12 +30,12 @@
 <script>
   export default {
     data: () => ({
-      icons: [
-        'mdi-home',
-        'mdi-clipboard-list',
-        'mdi-google-controller',
-        'mdi-book-open-page-variant',
-        'mdi-github',
+      items: [
+        { title:'Home', icon: 'mdi-home', to:'/'},
+        { title:'Rules', icon: 'mdi-clipboard-list', to:'/rules'},
+        { title:'Game', icon: 'mdi-google-controller', to:'/game'},
+        { title:'History', icon: 'mdi-book-open-page-variant', to:'/history'},
+        { title:'Github', icon: 'mdi-github', to:'https://github.com/MacFarmer/de.htwg.wt.muehle'},
       ],
     }),
   }

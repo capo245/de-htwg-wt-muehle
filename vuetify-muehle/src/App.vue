@@ -1,4 +1,4 @@
-<template>
+vue add pwa<template>
 
   <v-app id="inspire">
 
@@ -90,8 +90,24 @@
                 { title: 'Rules', icon: 'mdi-clipboard-list', to: '/rules' },
                 { title: 'Game', icon: 'mdi-google-controller', to: '/game' },
                 { title: 'History / Gallery', icon: 'mdi-book-open-page-variant', to: '/history' },
-                { title: 'This Project on GitHub', icon: 'mdi-github', to: '/project' },
+                { title: 'This Project on GitHub', icon: 'mdi-github', to:'https://github.com/MacFarmer/de.htwg.wt.muehle' },
             ],
     }),
+
+
+    created() {
+      if (this.$workbox) {
+        this.$workbox.addEventListener("waiting", () => {
+          this.showUpgradeUI = true;
+        });
+      }
+    },
+
+    methods: {
+      async accept() {
+        this.showUpgradeUI = false
+        await this.$workbox.messageSW({ type: "SKIP_WAITING" });
+      }
+    },
   }
 </script>
