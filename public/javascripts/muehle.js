@@ -1,15 +1,5 @@
 let csrf = $('input[name="csrfToken"]').attr("name");
 let json;
-let color = true;
-let fill;
-
-setTimeout(function () {
-    $('.loaded_after_5sec').show();
-}, 5000);
-
-setTimeout(function () {
-    $('.loading').hide();
-}, 5000);
 
 
 $.ajaxSetup({
@@ -167,148 +157,9 @@ function connectWebSocket() {
     };
 }
 
-function placeColoredStone() {
-    changeColor();
-
-    $('#l6DnU6HXv').on("click", function() {
-        $('#l6DnU6HXv').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#b2ErXBqKt7').on("click", function() {
-        $('#b2ErXBqKt7').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#a4uE0zCMG1').on("click", function() {
-        $('#a4uE0zCMG1').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#c4w1PI0rF0').on("click", function() {
-        $('#c4w1PI0rF0').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#a5DRjITAUa').on("click", function() {
-        $('#a5DRjITAUa').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#ac612WGkb').on("click", function() {
-        $('#ac612WGkb').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#fk1nTDyFq').on("click", function() {
-        $('#fk1nTDyFq').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#aBsc56hJb').on("click", function() {
-        $('#aBsc56hJb').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#a3o9XKplJH').on("click", function() {
-        $('#a3o9XKplJH').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#bjmGZa1Ib').on("click", function() {
-        $('#bjmGZa1Ib').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#dnRyXiNWR').on("click", function() {
-        $('#dnRyXiNWR').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#pkZsA1YHB').on("click", function() {
-        $('#pkZsA1YHB').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#d1ukEKrwVB').on("click", function() {
-        $('#d1ukEKrwVB').css({ fill: fill });
-    });
-
-    $('#hqKdDdo1c').on("click", function() {
-        $('#hqKdDdo1c').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#a2Oq3DfxDB').on("click", function() {
-        $('#a2Oq3DfxDB').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#a3F3KwHv3').on("click", function() {
-        $('#a3F3KwHv3').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#bg0iCMDOH').on("click", function() {
-        $('#bg0iCMDOH').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#cdmdmtNZw').on("click", function() {
-        $('#cdmdmtNZw').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#cjafwvEdr').on("click", function() {
-        $('#cjafwvEdr').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#a1yjNcWntD').on("click", function() {
-        $('#a1yjNcWntD').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#a1eXdGbnm4').on("click", function() {
-        $('#a1eXdGbnm4').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#aQVFMIor').on("click", function() {
-        $('#aQVFMIor').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#b91vujT6U').on("click", function() {
-        $('#b91vujT6U').css({ fill: fill });
-        changeColor();
-    });
-
-    $('#at1eUckaJ').on("click", function() {
-        $('#at1eUckaJ').css({ fill: fill });
-        changeColor();
-    });
-}
-
-function changeColor()
-{
-    if (color === true) {
-        fill = "#ffaa11";
-        color = false;
-    } else {
-        fill = "#000000";
-        color = true;
-    }
-
-    return color && fill;
-}
-
 $(document).ready(function () {
     loadJson();
     connectWebSocket();
-    placeColoredStone();
-    $(".loading").show();
-    $(".loaded_after_5sec").hide();
 }) ;
 
 $(document).ready(function () {
@@ -326,3 +177,5 @@ $(document).ready(function () {
     $('.animated-icon3').toggleClass('open');
   });
 });
+
+
