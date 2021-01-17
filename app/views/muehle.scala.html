@@ -9,20 +9,27 @@ controller.status
 }
 
 @main("Nine Men's Morris") {
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
 <script src="@routes.Assets.versioned("components/game-app-component/game-app.component.js")" ></script>
-<script src="@routes.Assets.versioned("components/game-controls-component/controls.component.js")" ></script>
 <script src="@routes.Assets.versioned("components/navigation-bar-component/navigation-bar.component.js")" ></script>
+
     <div id="navigation-bar">
         <nav-bar></nav-bar>
     </div>
 
-    <div id="muehle-app-controls">
-        <game-controls></game-controls>
-    </div>
-
-    <div class="row mt-4"></div>
     <div id="muehle-app">
         <game></game>
     </div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+<script src="@routes.Assets.versioned("javascripts/muehle.js")" ></script>
+<script src="@routes.Assets.versioned("javascripts/gameApp.js")" ></script>
+<link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/stylesheet.css")" >
+
 }

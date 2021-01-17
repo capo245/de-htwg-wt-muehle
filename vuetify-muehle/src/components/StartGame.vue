@@ -12,14 +12,14 @@
           <div class="box align-content-center">
               <div class="inner">
                       <span>
-                          <a class="animation" href="/game">
+                          <a class="animation" v-on:click="$router.push('game'); send();">
                               Click here, its free!
                           </a>
                       </span>
               </div>
               <div class="inner">
                       <span>
-                          <a class="animation" href="/game">
+                          <a class="animation" v-on:click="$router.push('game'); send();">
                               Start a new Game!
                           </a>
                       </span>

@@ -1,28 +1,7 @@
-import Vue from 'vue'
-import App from './App.vue'
-import wb from "./registerServiceWorker";
-import router from './router'
-import store from './store'
-import vuetify from './plugins/vuetify';
-import VueParticles from 'vue-particles'
+import Vue from 'vue';
 import MorrisGame from './components/morris-game.vue';
-import '@fortawesome/fontawesome-free/css/all.css'
-import '@fortawesome/fontawesome-free/js/all.js'
+
 import './app.scss';
-
-
-Vue.use(VueParticles)
-Vue.prototype.$workbox = wb;
-Vue.config.productionTip = false
-
-
-new Vue({
-  router,
-  store,
-  vuetify,
-  render: h => h(App)
-}).$mount('#app')
-
 
 const app = new Vue(
   {

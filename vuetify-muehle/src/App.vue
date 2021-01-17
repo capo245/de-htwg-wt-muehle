@@ -66,6 +66,7 @@ vue add pwa<template>
         ></v-img>
       </template>
 
+
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-app-bar-title>Nine Men's Morris</v-app-bar-title>
@@ -77,6 +78,7 @@ vue add pwa<template>
     <v-main>
         <router-view></router-view>
     </v-main>
+
   </v-app>
 
 </template>
@@ -111,3 +113,5 @@ vue add pwa<template>
     },
   }
 </script>
+
+
