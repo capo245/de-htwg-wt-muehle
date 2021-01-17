@@ -2,13 +2,14 @@ import Vue from 'vue'
 import App from './App.vue'
 import wb from "./registerServiceWorker";
 import router from './router'
-import store from './store'
+import store from "./store/index";
 import vuetify from './plugins/vuetify';
 import VueParticles from 'vue-particles'
 import MorrisGame from './components/morris-game.vue';
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 import './app.scss';
+import './registerServiceWorker'
 
 
 Vue.use(VueParticles)

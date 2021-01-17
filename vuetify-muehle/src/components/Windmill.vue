@@ -77,6 +77,8 @@
         </div>
       </div>
        <div class="mill">
+
+
          <div class="mill-blades">
            <div class="mill-blades-base"></div>
            <div class="mill-blades-rotator">
