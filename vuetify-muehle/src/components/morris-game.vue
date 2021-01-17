@@ -112,7 +112,7 @@
 .over-canvas
 {
   position:absolute;
-  @include opacity(0.97);
+  opacity: 0.97;
   top: 490px;
   width: 500px;
 }

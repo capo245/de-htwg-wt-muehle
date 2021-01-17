@@ -50,7 +50,7 @@
 <style lang="scss" scoped>
 @import './fade.scss';
 .hide_opacity {
-  opacity(0);
+  opacity: 0.0;
 }
 
 .triangle-border .heading{
