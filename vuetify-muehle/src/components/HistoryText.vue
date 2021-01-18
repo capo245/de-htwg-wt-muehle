@@ -1,6 +1,6 @@
 <template>
   <div class="history pa-16">
-    <h1>History</h1>
+      <h1 id="nine_header">History</h1>
 
          <p>
          <h2>Here you can find more information about one of the oldest games of humankind: <b>Nine mens morris.</b></h2>
@@ -19,3 +19,8 @@
                 </p>
   </div>
 </template>
+
+<style lang="scss" scoped>
+@import './HeaderStyle.css';
+
+</style>

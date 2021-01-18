@@ -1,6 +1,5 @@
 <template>
 
-<div class="wrapper">
   <div class="card">
     <div class="picture">
        <div class="background"></div>
@@ -172,7 +171,8 @@
            <div class="mill-main-window mill-main-window__3"></div>
            <div class="mill-main-window mill-main-window__4"></div>
            <div class="mill-main-window mill-main-window__5"></div>
-           <div class="mill-main-window mill-main-window__6"></div>
+           <div class="mill-main-window mill-main-window__6">
+           </div>
          </div>
          <div class="mill-head">
            <div class="mill-head-bottom">
@@ -215,7 +215,6 @@
         </div>
       </div>
     </div>
-</div>
 </div>
 
 </template>

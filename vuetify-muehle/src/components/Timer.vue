@@ -1,9 +1,9 @@
 <template>
   <v-container>
-    <v-row justify="center" align="center">
+    <v-row justify="center" align="center" style="color:#ffffff;">
       <p>Time</p>
     </v-row>
-    <v-row justify="center" align="center">
+    <v-row justify="center" align="center" style="color:#ffffff;">
       <p class="font-weight-bold headline font-color-red">{{time}}</p>
     </v-row>
   </v-container>

@@ -1,7 +1,7 @@
 <template>
     <div class="rules pa-16">
 
-        <h1>Rules</h1>
+        <h1 id="nine_header">Rules</h1>
 
         <p>
         <h3>The game proceeds in three phases:</h3>
@@ -42,3 +42,8 @@
         </div>
     </div>
 </template>
+
+<style lang="scss" scoped>
+@import './HeaderStyle.css';
+
+</style>

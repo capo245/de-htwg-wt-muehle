@@ -3,7 +3,7 @@
 
     <transition name="fade">
       <div class="triangle-border" v-bind:class="[isActive ? '' : 'hide_opacity']">
-        <p class="heading has-text-centered n">Current Turn</p>
+        <p class="heading has-text-centered n">It's your turn: {{playerName}}</p>
       </div>
     </transition>
 
@@ -20,7 +20,6 @@
           <div class="control">
             <div class="select is-small">
               <select @change="onAgentChange($event.target.value)">
-                <option disabled value="">Please select one</option>
                 <option v-for="option in availableAgents" :selected="option.id == selectedAgent" v-bind:value="option.id">
                   {{ option.name }}
                 </option>

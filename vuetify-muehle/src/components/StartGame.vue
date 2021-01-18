@@ -1,7 +1,8 @@
 <template>
-  <div class="rules pa-16">
 
-      <div class="textarea center">
+<div align="center" style="margin:70px;">
+
+      <div class="center" style="margin-Bottom:70px;">
           <p>
               <strong>
                   <br>Welcome to Nine Men's Morris in the lecture Webtechnologies at HTWG Konstanz. Enjoy!
@@ -9,83 +10,42 @@
           </p>
       </div>
 
-          <div class="box align-content-center">
-              <div class="inner">
-                      <span>
-                          <a class="animation" v-on:click="$router.push('game'); send();">
-                              Click here, its free!
-                          </a>
-                      </span>
-              </div>
-              <div class="inner">
-                      <span>
-                          <a class="animation" v-on:click="$router.push('game'); send();">
-                              Start a new Game!
-                          </a>
-                      </span>
-              </div>
-          </div>
-      </div>
+    <button class="pulse-button">
+       <a style="  color:#ffffff; font-weight:300; font-size:20px; font-family:'Roboto';" v-on:click="$router.push('game'); send();">
+          PLAY
+       </a>
+    </button>
+</div>
+
 </template>
 
+<style scoped>
 
-<style>
-a.animation {
-    text-decoration: none;
-    color: #343a40;
-}
-a.animation:hover {
-    text-decoration: none;
-    color: #007bff;
-}
+.pulse-button {
 
-.box {
-    justify-content: center;
-    display: flex;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: none;
+  box-shadow: 0 0 0 0 rgba(255, 165, 0, 0.7);
+  border-radius: 50%;
+  background-color: #ffa500;
+  background-size:cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
 }
-
-.box .inner {
-    width: 2000px;
-    height: 80px;
-    line-height: 80px;
-    font-size: 2.5em;
-    font-family: sans-serif;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
+.pulse-button:hover
+{
+  -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
 }
 
-.box .inner:first-child {
-    background-color: none;
-    color: darkred;
-    transform-origin: left;
-    transform: perspective(100px) rotateY(0deg);
-}
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(255, 165, 0, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(255, 165, 0, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(255, 165, 0, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 45px rgba(255, 165, 0, 0);}}
 
-.box .inner:last-child {
-    background-color: none;
-    color: antiquewhite;
-    transform-origin: right;
-    transform: perspective(100px) rotateY(0deg);
-}
-
-.box .inner span {
-    position: absolute;
-    animation: marquee 6s linear infinite;
-}
-
-.box .inner:first-child span {
-    animation-delay: 3s;
-    left: -100%;
-}
-
-@keyframes marquee {
-    from {
-        left: 100%;
-    }
-
-    to {
-        left: -100%;
-    }
-}
 </style>

@@ -1,8 +1,8 @@
 <template>
   <v-container>
     <v-row justify="center" align="center">
-      <p class="display-1 my-6">Millsweeper</p>
-      <v-icon x-large>mdi-wind-turbine</v-icon>
+      <p class="display-1 my-6" style="color:#ffffff;">Millsweeper</p>
+      <v-icon x-large style="color:#ffffff;">mdi-wind-turbine</v-icon>
     </v-row>
     <v-row v-for="(row, rowIdx) in pattern" :key="rowIdx" justify="center" no-gutters>
       <template v-for="(col , colIdx) in row">
@@ -30,7 +30,7 @@
       <game-over message="You Win!" />
     </v-row>
     <v-row v-else-if="lost">
-      <game-over message="You Lose!" />
+      <game-over message="Lost to Mills!" />
     </v-row>
   </v-container>
 </template>
