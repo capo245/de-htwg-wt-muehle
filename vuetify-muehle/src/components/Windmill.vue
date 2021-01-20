@@ -1,6 +1,6 @@
 <template>
 
-  <div class="card">
+  <div class="card" style="margin-bottom:50px;">
     <div class="picture">
        <div class="background"></div>
       <div class="layout layout__back">

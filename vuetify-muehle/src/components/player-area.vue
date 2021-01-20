@@ -15,20 +15,6 @@
         </transition>
       </p>
 
-      <div class="field is-horizontal">
-        <div class="field-body">
-          <div class="control">
-            <div class="select is-small">
-              <select @change="onAgentChange($event.target.value)">
-                <option v-for="option in availableAgents" :selected="option.id == selectedAgent" v-bind:value="option.id">
-                  {{ option.name }}
-                </option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="level-item has-text-centered">
         <div>
           <p class="heading">Wins:</p>

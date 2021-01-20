@@ -9,7 +9,7 @@ vue add pwa<template>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="title">
-            Nine Men's Morris
+            Mill
           </v-list-item-title>
           <v-list-item-subtitle>
             Menu
@@ -69,19 +69,23 @@ vue add pwa<template>
 
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Nine Men's Morris</v-app-bar-title>
+      <v-app-bar-title>Mill Board Game</v-app-bar-title>
 
       <v-spacer></v-spacer>
 
     </v-app-bar>
 
     <v-main>
+
         <router-view></router-view>
+
     </v-main>
 
   </v-app>
 
 </template>
+
+
 
 <script>
   export default {
@@ -112,6 +116,5 @@ vue add pwa<template>
       }
     },
   }
+
 </script>
-
-

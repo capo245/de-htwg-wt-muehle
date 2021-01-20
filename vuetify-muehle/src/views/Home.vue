@@ -1,13 +1,14 @@
+
 <template>
 
   <div class="home">
-    <StartGame/>
-    <Windmill/>
-    <FightMills/>
-    <Footer/>
+
+        <StartGame/>
+        <Windmill/>
+        <FightMills/>
+        <Footer/>
+
   </div>
-
-
 
 </template>
 

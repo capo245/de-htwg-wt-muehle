@@ -4,16 +4,52 @@
 
     <div id="controls">
 
+      <v-card
+        flat
+        class="py-1"
+        colour="blue"
+      >
+        <v-card-text>
+          <v-row
+            align="center"
+            justify="center"
+          >
+            <v-col cols="12">
+              <p class="text-center">
+                Game Center
+              </p>
+            </v-col>
+            <v-btn-toggle
+              v-model="toggle_exclusive"
+              mandatory
+            >
+              <v-btn color="orange lighten-1" v-on:click="$router.push('rules');"> Rules
+                <v-icon color="orange lighten-1" >mdi-help-circle</v-icon>
+              </v-btn>
+              <v-btn color="orange lighten-1" @click="reset"> New Game
+                <v-icon color="orange lighten-1" >mdi-gamepad</v-icon>
+              </v-btn>
+              <v-btn color="orange lighten-1" @click="undo"> Undo
+                <v-icon color="orange lighten-1" >mdi-arrow-left-circle</v-icon>
+              </v-btn>
+              <v-btn color="orange lighten-1" @click="resetWinStats"> Clear Stats
+                <v-icon color="orange lighten-1" >mdi-close-box</v-icon>
+              </v-btn>
+              <v-btn color="orange lighten-1" v-on:click="$router.push('/');"> Quit
+                <v-icon color="orange lighten-1" >mdi-emoticon-angry </v-icon>
+              </v-btn>
+            </v-btn-toggle>
+          </v-row>
+        </v-card-text>
+      </v-card>
+
       <div class="level">
         <div class="level-left">
           <player-area
             :numberOfWins='numberOfWins[0]'
             :isThinking='isThinking[0]'
             :is-active='activePlayer == 0'
-            :availableAgents="availableAgents"
-            playerName="White"
-            :selectedAgent="selectedAgent[0].id"
-            v-on:agent-change="changeActiveAgent(0,...arguments)"
+            playerName="Player 1"
             />
         </div>
 
@@ -55,42 +91,10 @@
             :numberOfWins='numberOfWins[1]'
             :isThinking='isThinking[1]'
             :is-active='activePlayer == 1'
-            :availableAgents="availableAgents"
-            playerName="Black"
-            :selectedAgent="selectedAgent[1].id"
-            v-on:agent-change="changeActiveAgent(1,...arguments)"
+            playerName="Player 2"
             />
         </div>
       </div>
-
-      <div class="level is-mobile">
-        <div class="level-item">
-          <div class="field is-grouped">
-            <div class="buttons is-centered">
-              <button class="button is-medium is-info is-outlined" @click="undo">
-                <span class="icon is-medium">
-                  <i class="fa fa-step-backward"></i>
-                </span> <span>Undo Last Move</span>
-              </button>
-
-              <button class="button is-medium is-outlined" @click="reset">
-                <span class="icon is-medium">
-                  <i class="fa fa-fast-backward"></i>
-                </span>
-                <span>New Game</span>
-              </button>
-
-              <button class="button is-medium is-danger is-outlined" @click="resetWinStats">
-                <span class="icon is-medium">
-                  <i class="fa fa-trash-o"></i>
-                </span>
-                 <span>Clear Stats</span>
-               </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 

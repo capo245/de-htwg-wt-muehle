@@ -1,8 +1,8 @@
 {
-  "name":"muehle",
-  "short_name":"muehle",
+  "name":"Mill Board Game",
+  "short_name":"Mill Board Game",
   "scope": "/",
-  "theme_color":"#4DBA87",
+  "theme_color":"#ff9900",
   "start_url":"/",
   "display":"standalone",
   "background_color":"#000000",
@@ -40,11 +40,6 @@
     {
       "src": "./img/icons/icon-384x384.png",
       "sizes": "384x384",
-      "type": "image/png"
-    },
-    {
-      "src": "./img/icons/icon-512x512.png",
-      "sizes": "512x512",
       "type": "image/png"
     }]
 }

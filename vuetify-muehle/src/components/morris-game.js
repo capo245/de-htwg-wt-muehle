@@ -44,8 +44,6 @@ export default
 
         {id:'human', name: "Player", controller: HumanAgent},
 
-        {id:'random', name:"KI: Random", controller: WorkerProxyAgent, args: { bundle: "ai_random.bundle.js"} },
-
       ]
     };
   },
@@ -66,7 +64,7 @@ export default
 
     //set selectedAgent to trigger watch
     //@See https://vuejs.org/v2/api/#vm-watch
-    this.selectedAgent = [{id:'human'},{id:'random'}];
+    this.selectedAgent = [{id:'human'},{id:'human'}];
 
 
     //Invoked when the game engine signaled that the game has ended

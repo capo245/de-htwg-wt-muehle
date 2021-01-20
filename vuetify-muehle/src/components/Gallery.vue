@@ -68,35 +68,35 @@
     data: () => ({
       items: [
         {
-          title: 'Nine Men’s Morris from ...',
+          title: 'Mill Game from ...',
           text: `Nine Men’s Morris, carved on the floor of the platform between the Bell Tower and the Dome of Diocletian’s Mausoleum in Split, Croatia.`,
           subtext: 'Photo: Helen Goodchild, June 29, 2009.',
           place: 'Croatia' ,
           img: 'Mill1.jpg',
         },
         {
-          title: 'Nine Men’s Morris from ...',
+          title: 'Mill Game from ...',
           text: 'Nine Men’s Morris carved into stone in the ruins of Byzantine church, St. John’s Basilica, Selçuk, Turkey.',
           subtext: 'Photo: Tolka Rover, October 22, 2009.',
           place: 'Turkey' ,
           img: 'Mill2.jpg',
         },
         {
-          title: 'Nine Men’s Morris from ...',
+          title: 'Mill Game from ...',
           text: 'Wooden Nine Men’s Morris from medieval Velikiy Novgorod, Russia. Novgorod State United Museum. ',
           subtext: 'Photo: Professor Michael Fuller, St. Louis Community College, 2006.',
           place: 'Russia' ,
           img: 'Mill3.jpg',
         },
         {
-          title: 'Nine Men’s Morris from ...',
+          title: 'Mill Game from ...',
           text: 'Nine Men’s Morris in Hadrian’s Library, Athens, Greece.',
           subtext: 'Photo taken: March 4, 2011.',
           place: 'Greece' ,
           img: 'Mill4.jpg',
         },
         {
-          title: 'Nine Men’s Morris from ...',
+          title: 'Mill Game from ...',
           text: 'Nine Men’s Morris on the south wall window ledge of the Church of St. John the Baptist in Northorpe Lincolnshire, England.',
           subtext: 'Photo taken: June 8, 2017.',
           place: 'England' ,

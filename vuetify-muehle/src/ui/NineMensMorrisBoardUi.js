@@ -129,8 +129,8 @@ export class NineMensMorrisBoardUi extends EventEmitter {
 
   _setupGrid() {
     const strokeWidth = 4;
-    const lineColor = '#000000';
-    const boardFillColor = '#FFF1C1';
+    const lineColor = '#9e9ea3';
+    const boardFillColor = '#1e1a1a';
 
     let rectangleProto = new fabric.Rect({
       selectable: false,
@@ -208,10 +208,10 @@ export class NineMensMorrisBoardUi extends EventEmitter {
     this.canvas.add(horizontalGridLine2);
 
     const circleParams = {
-      strokeWidth: 2,
-      radius: 6,
-      fill: '#000',
-      stroke: '#000',
+      strokeWidth: 5,
+      radius: 10,
+      fill: '#9e9ea3',
+      stroke: '#9e9ea3',
       originX: 'center',
       originY: 'center',
       selectable: false
@@ -221,12 +221,12 @@ export class NineMensMorrisBoardUi extends EventEmitter {
       strokeWidth: 2,
       radius: 10,
 
-      colorAllowed: '#6dff05',
+      colorAllowed: '#0e6ae1',
       colorNotAllowed: '#ff0000',
-      colorHighlight: 'orange',
+      colorHighlight: '#de0ee1',
 
-      fillWhenActive: 'orange',
-      fillWhenInactive: '#6dff05',
+      fillWhenActive: '#de0ee1',
+      fillWhenInactive: '#0e6ae1',
 
       stroke: '#000',
       originX: 'center',
@@ -446,8 +446,8 @@ export class NineMensMorrisBoardUi extends EventEmitter {
         x2: 52,
         y2: 50,
         colorStops: {
-          0: 'rgb(255,255,255,1)',
-          1: 'rgba(244, 244, 244,1)'
+          0: 'rgb(255, 200, 0, 1)',
+          1: 'rgba(230, 189, 0, 1)'
         }
       });
       whiteStone.setShadow({color: 'rgba(0,0,0,0.3)', offsetX: 2, offsetY: 2, blur: 5});
@@ -465,8 +465,8 @@ export class NineMensMorrisBoardUi extends EventEmitter {
         x2: 52,
         y2: 50,
         colorStops: {
-          0: 'rgb(255,255,255,1)',
-          1: 'rgba(0, 0, 0,1)'
+          0: 'rgb(0, 217, 255,1)',
+          1: 'rgba(0, 217, 255,1)'
         }
       });
       blackStone.setShadow({color: 'rgba(0,0,0,0.3)', offsetX: 2, offsetY: 2, blur: 5});

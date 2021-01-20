@@ -1,7 +1,8 @@
 <template>
   <v-container>
     <v-row justify="center" align="center">
-      <p class="display-1 my-6" style="color:#ffffff;">Millsweeper</p>
+      <p class="display-1 my-6" style="color:#ffffff; font-family: 'Press Start 2P', cursive;">Millsweeper</p>
+
       <v-icon x-large style="color:#ffffff;">mdi-wind-turbine</v-icon>
     </v-row>
     <v-row v-for="(row, rowIdx) in pattern" :key="rowIdx" justify="center" no-gutters>
@@ -105,4 +106,5 @@ export default {
     @include background-color($bomb: true, $flagged: true);
   }
 }
+
 </style>
