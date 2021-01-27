@@ -8,15 +8,6 @@
        margin-left: 80px;
 }
 
-.imagesBackground {
-    position: fixed;
-    top: 0;
-    down: 0;
-    left: 0;
-    z-index: -100;
-    opacity: 20%;
-}
-
 textarea {
     width : 100px; min-height : 70px;
 }
@@ -204,6 +195,8 @@ figcaption {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
 	gap: 1em;
+	margin-right: 110px;
+    margin-left: 80px;
 }
 
 #gallery figure {
@@ -483,5 +476,9 @@ transform: rotate(-135deg);
   width: 100%;
   background-color: #6c757d;
   color: white;
+  text-align: center;
+}
+
+.center {
   text-align: center;
 }
