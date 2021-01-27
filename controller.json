@@ -1,22 +1,22 @@
 {
   "controller" : {
     "status" : " ",
-    "active" : "Maurice",
+    "active" : "Marc",
     "players" : [ {
       "name" : "Marc",
       "color" : "W",
-      "placed" : 6,
+      "placed" : 0,
       "stones" : 9,
       "mills" : 0
     }, {
       "name" : "Maurice",
       "color" : "B",
-      "placed" : 5,
+      "placed" : 0,
       "stones" : 9,
       "mills" : 0
     } ],
     "grid" : {
-      "filled" : "WWBOBBOOWOOOBWWOOWOOOOOO"
+      "filled" : "OOOOOOOOOOOOOOOOOOOOOOOO"
     }
   }
 }
