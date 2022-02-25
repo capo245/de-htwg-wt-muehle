@@ -16,6 +16,10 @@ GET        /undo                controllers.MuehleController.undo
 
 GET        /redo                controllers.MuehleController.redo
 
+GET        /save               controllers.MuehleController.save
+
+GET        /load                controllers.MuehleController.load
+
 GET        /history             controllers.MuehleController.history
 
 

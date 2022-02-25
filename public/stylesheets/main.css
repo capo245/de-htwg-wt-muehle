@@ -12,8 +12,21 @@ body {
         background-color:#F5DEB3;
 }
 
+.imagesBackground {
+    position: fixed;
+    top: 0;
+    down: 0;
+    left: 0;
+    z-index: -100;
+    opacity: 20%;
+}
+
+textarea {
+    width : 100px; min-height : 50px;
+}
+
 h1 {
-    text-align: center;
+    text-align: left;
     color: white;
     /*wird überschrieben */
 
@@ -30,7 +43,7 @@ h1 {
         margin-top: 0px;
     	font: bold 4em Bangers, sans-serif;
         letter-spacing: 0.1em;
-        background-image: linear-gradient(white 45%, black 55%);
+        background-image: linear-gradient(#f8f9fa 45%,#343a40 55%);
     }
 
 h2 {
@@ -42,14 +55,12 @@ h2 {
     margin-top: 0px;
     background-color: #DAA520;
     background-image: linear-gradient(to bottom, rgba(218,165,32,1), rgba(245,222,179,1));
-    padding-bottom: 20px;
 }
 .main-footer {
     text-align: center;
    /* background: #DAA520;*/
     background-color: #DAA520;
     background-image: linear-gradient(to top, rgba(218,165,32,1), rgba(245,222,179,1));
-    padding-top: 10px;
 }
 .gamecontainer {
     text-align: center;
@@ -57,16 +68,15 @@ h2 {
     margin: 1em;
     padding: 0.5em;
     display: inline-block;
-    background: #DAA520;
+    background: #343a40 ;
     font-family: Consolas;
     font-size: 40px;
-    color: black;
+    color: #FFFFFF;
     border: 3px solid black;
 }
 
 .container {
     text-align: center;
-    padding-top: 60px;
 }
 .gamecontainer div {
     text-align: center;
@@ -114,11 +124,11 @@ img {
 }
 
 a:link {
-    color: #977316;
+    color: #343a40 ;
 }
 
 a:visited {
-    color: #977316;
+    color: #343a40 ;
 }
 
 a:hover {
@@ -148,13 +158,13 @@ a.button3{
     text-decoration:none;
     font-family:'Roboto',sans-serif;
     font-weight:300;
-    color:#FFFFFF;
+    color:#F0E68C;
     background-color:#DAA520;
     text-align:center;
     transition: all 0.2s;
 }
 a.button3:hover{
-    color:#FFFFFF;
+    color:#F0E68C;
     background-color:#8B4513;
 }
 .justify {
@@ -262,12 +272,73 @@ figure.mitte figcaption {
 	text-align: center;
 }
 
+/*########*/
+a.animation {
+    text-decoration: none;
+    color: #343a40;
+}
+a.animation:hover {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.box {
+    justify-content: center;
+    display: flex;
+}
+
+.box .inner {
+    width: 2000px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 2.5em;
+    font-family: sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.box .inner:first-child {
+    background-color: none;
+    color: darkred;
+    transform-origin: left;
+    transform: perspective(100px) rotateY(0deg);
+}
+
+.box .inner:last-child {
+    background-color: none;
+    color: antiquewhite;
+    transform-origin: right;
+    transform: perspective(100px) rotateY(0deg);
+}
+
+.box .inner span {
+    position: absolute;
+    animation: marquee 6s linear infinite;
+}
+
+.box .inner:first-child span {
+    animation-delay: 3s;
+    left: -100%;
+}
+
+@keyframes marquee {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
 /*Game-Buttons*/
 .gg-play-button {
     box-sizing: border-box;
+    position: center;
     display: block;
     transform: scale(var(--ggs,1));
-    width: 44px;
+    width: 22px;
     height: 22px;
     color: green;
 }
@@ -284,7 +355,35 @@ figure.mitte figcaption {
     top: 6px;
     left: 9px
 }
-
+.gg-push-down {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 2px;
+    height: 16px;
+    background: currentColor;
+}
+.gg-push-down::after,
+.gg-push-down::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    border-bottom: 2px solid;
+    bottom: -5px;
+    left: -5px
+}
+.gg-push-down::after {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid;
+    transform: rotate(45deg);
+    left: -3px;
+    bottom: 0
+}
 .gg-redo {
     box-sizing: border-box;
     position: relative;
@@ -341,7 +440,7 @@ figure.mitte figcaption {
     width: 22px;
     height: 22px;
     border: 2px solid;
-    border-radius: 40px;
+    border-radius: 40px
 }
 .gg-close-o::after,
 .gg-close-o::before {
@@ -359,35 +458,6 @@ figure.mitte figcaption {
 }
 .gg-close-o::after {
     transform: rotate(-45deg)
-}
-.gg-push-down {
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    transform: scale(var(--ggs,1));
-    width: 2px;
-    height: 16px;
-    background: currentColor;
-}
-.gg-push-down::after,
-.gg-push-down::before {
-    content: "";
-    display: block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 12px;
-    height: 2px;
-    border-bottom: 2px solid;
-    bottom: -5px;
-    left: -5px
-}
-.gg-push-down::after {
-    width: 8px;
-    height: 8px;
-    border-right: 2px solid;
-    transform: rotate(45deg);
-    left: -3px;
-    bottom: 0
 }
 .gg-software-upload {
     box-sizing: border-box;
@@ -427,21 +497,65 @@ figure.mitte figcaption {
     left: 5px;
     bottom: 3px
 }
-.btn {
-  height: 60px;
-}
 
 .btn-group .btn {
-  padding: 10px 30px;
-  font-size: 12px;
-  cursor: pointer;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
   float: left;
-  background-color:#DAA520
+  background-color: #A9A9A9
 }
 .btn-group .btn:not(:last-child) {
-    border-right: none; /* Prevent double borders */
+  border-right: none; /* Prevent double borders */
 }
 .btn-group .btn:hover {
   color:#FFFFFF;
   background-color:#8B4513;
+}
+
+.btn .gg-software-upload{
+    border-right: solid;
+}
+
+/*######*/
+/* change the background color */
+.navbar-custom {
+    background-color: #ffffff;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: red;
+    padding: 0.8rem 1rem;
+}
+/* change the link color and add padding for height */
+.navbar-custom .navbar-nav .nav-link {
+    color: red;
+    padding: 1rem 1rem;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+    background-color: #f8f9fa ; /* add background-color to active links */
+}.navbar-custom {
+    background-color: red;
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: #f8f9fa ;
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: #f8f9fa ;
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #343a40 ;
 }
