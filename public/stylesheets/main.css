@@ -204,6 +204,8 @@ figcaption {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
 	gap: 1em;
+	margin-right: 110px;
+    margin-left: 80px;
 }
 
 #gallery figure {
@@ -483,5 +485,9 @@ transform: rotate(-135deg);
   width: 100%;
   background-color: #6c757d;
   color: white;
+  text-align: center;
+}
+
+.center {
   text-align: center;
 }
