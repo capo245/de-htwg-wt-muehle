@@ -8,12 +8,12 @@
        margin-left: 80px;
 }
 
-textarea {
-    width : 100px; min-height : 70px;
+body {
+        background-color:#F5DEB3;
 }
 
 h1 {
-    text-align: left;
+    text-align: center;
     color: white;
     /*wird überschrieben */
 
@@ -30,7 +30,7 @@ h1 {
         margin-top: 0px;
     	font: bold 4em Bangers, sans-serif;
         letter-spacing: 0.1em;
-        background-image: linear-gradient(#f8f9fa 45%,#343a40 55%);
+        background-image: linear-gradient(white 45%, black 55%);
     }
 
 h2 {
@@ -42,12 +42,14 @@ h2 {
     margin-top: 0px;
     background-color: #DAA520;
     background-image: linear-gradient(to bottom, rgba(218,165,32,1), rgba(245,222,179,1));
+    padding-bottom: 20px;
 }
 .main-footer {
     text-align: center;
    /* background: #DAA520;*/
     background-color: #DAA520;
     background-image: linear-gradient(to top, rgba(218,165,32,1), rgba(245,222,179,1));
+    padding-top: 10px;
 }
 .gamecontainer {
     text-align: center;
@@ -55,15 +57,16 @@ h2 {
     margin: 1em;
     padding: 0.5em;
     display: inline-block;
-    background: #343a40 ;
+    background: #DAA520;
     font-family: Consolas;
     font-size: 40px;
-    color: #FFFFFF;
+    color: black;
     border: 3px solid black;
 }
 
 .container {
     text-align: center;
+    padding-top: 60px;
 }
 .gamecontainer div {
     text-align: center;
@@ -75,10 +78,6 @@ h2 {
 
 .nav-home {
     text-align: left;
-}
-
-.grid {
-    cursor: pointer
 }
 
 .commands {
@@ -115,11 +114,11 @@ img {
 }
 
 a:link {
-    color: #343a40 ;
+    color: #977316;
 }
 
 a:visited {
-    color: #343a40 ;
+    color: #977316;
 }
 
 a:hover {
@@ -149,13 +148,13 @@ a.button3{
     text-decoration:none;
     font-family:'Roboto',sans-serif;
     font-weight:300;
-    color:#F0E68C;
+    color:#FFFFFF;
     background-color:#DAA520;
     text-align:center;
     transition: all 0.2s;
 }
 a.button3:hover{
-    color:#F0E68C;
+    color:#FFFFFF;
     background-color:#8B4513;
 }
 .justify {
@@ -195,8 +194,6 @@ figcaption {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
 	gap: 1em;
-	margin-right: 110px;
-    margin-left: 80px;
 }
 
 #gallery figure {
@@ -265,220 +262,186 @@ figure.mitte figcaption {
 	text-align: center;
 }
 
-/*########*/
-a.animation {
-    text-decoration: none;
-    color: #343a40;
+/*Game-Buttons*/
+.gg-play-button {
+    box-sizing: border-box;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 44px;
+    height: 22px;
+    color: green;
 }
-a.animation:hover {
-    text-decoration: none;
-    color: #007bff;
-}
-
-.box {
-    justify-content: center;
-    display: flex;
-}
-
-.box .inner {
-    width: 2000px;
-    height: 80px;
-    line-height: 80px;
-    font-size: 2.5em;
-    font-family: sans-serif;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.box .inner:first-child {
-    background-color: none;
-    color: darkred;
-    transform-origin: left;
-    transform: perspective(100px) rotateY(0deg);
-}
-
-.box .inner:last-child {
-    background-color: none;
-    color: antiquewhite;
-    transform-origin: right;
-    transform: perspective(100px) rotateY(0deg);
-}
-
-.box .inner span {
+.gg-play-button::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
     position: absolute;
-    animation: marquee 6s linear infinite;
+    width: 0;
+    height: 10px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 6px solid;
+    top: 6px;
+    left: 9px
 }
 
-.box .inner:first-child span {
-    animation-delay: 3s;
-    left: -100%;
+.gg-redo {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 14px;
+    height: 14px;
+    border: 2px solid;
+    border-right-color: transparent;
+    border-radius: 100px
 }
-
-@keyframes marquee {
-    from {
-        left: 100%;
-    }
-
-    to {
-        left: -100%;
-    }
+.gg-redo::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    top: -3px;
+    right: -1px;
+    transform: rotate(68deg)
+}
+.gg-undo {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 14px;
+    height: 14px;
+    border: 2px solid;
+    border-left-color: transparent;
+    border-radius: 100px
+}
+.gg-undo::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    top: -3px;
+    left: -1px;
+    transform: rotate(-68deg)
+}
+.gg-close-o {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    border-radius: 40px;
+}
+.gg-close-o::after,
+.gg-close-o::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background: currentColor;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    top: 8px;
+    left: 3px
+}
+.gg-close-o::after {
+    transform: rotate(-45deg)
+}
+.gg-push-down {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 2px;
+    height: 16px;
+    background: currentColor;
+}
+.gg-push-down::after,
+.gg-push-down::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    border-bottom: 2px solid;
+    bottom: -5px;
+    left: -5px
+}
+.gg-push-down::after {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid;
+    transform: rotate(45deg);
+    left: -3px;
+    bottom: 0
+}
+.gg-software-upload {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 16px;
+    height: 6px;
+    border: 2px solid;
+    border-top: 0;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    margin-top: 8px
+}
+.gg-software-upload::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid;
+    border-top: 2px solid;
+    transform: rotate(45deg);
+    left: 2px;
+    bottom: 4px
+}
+.gg-software-upload::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+    left: 5px;
+    bottom: 3px
+}
+.btn {
+  height: 60px;
 }
 
 .btn-group .btn {
-  padding: 15px 32px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
+  padding: 10px 30px;
+  font-size: 12px;
+  cursor: pointer;
   float: left;
-  background-color: #A9A9A9
+  background-color:#DAA520
 }
 .btn-group .btn:not(:last-child) {
-  border-right: none; /* Prevent double borders */
+    border-right: none; /* Prevent double borders */
 }
 .btn-group .btn:hover {
   color:#FFFFFF;
   background-color:#8B4513;
-}
-
-.btn .gg-software-upload{
-    border-right: solid;
-}
-
-/*######*/
-/* change the background color */
-.navbar-custom {
-    background-color: #ffffff;
-}
-/* change the brand and text color */
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-    color: red;
-    padding: 0.8rem 1rem;
-}
-/* change the link color and add padding for height */
-.navbar-custom .navbar-nav .nav-link {
-    color: red;
-    padding: 1rem 1rem;
-}
-/* change the color of active or hovered links */
-.navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item:hover .nav-link {
-    color: #ffffff;
-    background-color: #f8f9fa ; /* add background-color to active links */
-}.navbar-custom {
-    background-color: red;
-}
-
-/* change the brand and text color */
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-    color: #f8f9fa ;
-}
-
-/* change the link color */
-.navbar-custom .navbar-nav .nav-link {
-    color: #f8f9fa ;
-}
-
-/* change the color of active or hovered links */
-.navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item:hover .nav-link {
-    color: #343a40 ;
-}
-
-/* Navigation Ham-Menue */
-
-.animated-icon1, .animated-icon2, .animated-icon3 {
-width: 30px;
-height: 20px;
-position: relative;
-margin: 0px;
--webkit-transform: rotate(0deg);
--moz-transform: rotate(0deg);
--o-transform: rotate(0deg);
-transform: rotate(0deg);
--webkit-transition: .5s ease-in-out;
--moz-transition: .5s ease-in-out;
--o-transition: .5s ease-in-out;
-transition: .5s ease-in-out;
-cursor: pointer;
-}
-
-.animated-icon1 span, .animated-icon2 span, .animated-icon3 span {
-display: block;
-position: absolute;
-height: 3px;
-width: 100%;
-border-radius: 9px;
-opacity: 1;
-left: 0;
--webkit-transform: rotate(0deg);
--moz-transform: rotate(0deg);
--o-transform: rotate(0deg);
-transform: rotate(0deg);
--webkit-transition: .25s ease-in-out;
--moz-transition: .25s ease-in-out;
--o-transition: .25s ease-in-out;
-transition: .25s ease-in-out;
-}
-
-.animated-icon1 span {
-background: #FFFFFF;
-}
-
-.animated-icon2 span {
-background: #FFFFFF;
-}
-
-.animated-icon3 span {
-background: #FFFFFF;
-}
-
-.animated-icon1 span:nth-child(1) {
-top: 0px;
-}
-
-.animated-icon1 span:nth-child(2) {
-top: 10px;
-}
-
-.animated-icon1 span:nth-child(3) {
-top: 20px;
-}
-
-.animated-icon1.open span:nth-child(1) {
-top: 11px;
--webkit-transform: rotate(135deg);
--moz-transform: rotate(135deg);
--o-transform: rotate(135deg);
-transform: rotate(135deg);
-}
-
-.animated-icon1.open span:nth-child(2) {
-opacity: 0;
-left: -60px;
-}
-
-.animated-icon1.open span:nth-child(3) {
-top: 11px;
--webkit-transform: rotate(-135deg);
--moz-transform: rotate(-135deg);
--o-transform: rotate(-135deg);
-transform: rotate(-135deg);
-}
-
-/*Footer*/
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #6c757d;
-  color: white;
-  text-align: center;
-}
-
-.center {
-  text-align: center;
 }
