@@ -9,191 +9,27 @@ controller.status
 }
 
 @main("Nine Men's Morris") {
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
-    <script src="@routes.Assets.versioned("components/game-controls-component/controls.component.js")" ></script>
-    <script src="@routes.Assets.versioned("components/navigation-bar-component/navigation-bar.component.js")" ></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+<script src="@routes.Assets.versioned("components/game-app-component/game-app.component.js")" ></script>
+<script src="@routes.Assets.versioned("components/navigation-bar-component/navigation-bar.component.js")" ></script>
 
     <div id="navigation-bar">
         <nav-bar></nav-bar>
     </div>
 
-    <div id="muehle-app-controls">
-        <game-controls></game-controls>
+    <div id="muehle-app">
+        <game></game>
     </div>
 
-    <div class="center" >
-        <div class="row">
-         <div class="col col-xs-12">
-             <div class="col-md-12 mt-2">
-                 <div class="gamecontainer col-md-12">
-                     <div>
-                         <span class="status">
-                         @status
-                         </span>
-                     </div>
-                     <div>
-                         <span id="field1" class="grid col-xs-1">
-                         @grid.slice(0, 1)
-                         </span>
-                         <span class="col-xs-1">
-                         @grid.slice(1, 6)
-                         </span>
-                         <span id="field2" class="grid col-xs-1">
-                         @grid.slice(6, 7)
-                         </span>
-                         <span class="col-xs-1">
-                         @grid.slice(7, 12)
-                         </span>
-                         <span id="field3" class="grid col-xs-1">
-                         @grid.slice(12, 13)
-                         </span>
-                     </div>
-                     <div>
-                         <span class="col-xs-1">
-                         @grid.slice(14, 16)
-                         </span>
-                         <span id="field4" class="grid col-xs-1">
-                         @grid.slice(16, 17)
-                         </span>
-                         <span class="col-xs-1">
-                         @grid.slice(17, 20)
-                         </span>
-                         <span id="field5" class="grid col-xs-1">
-                         @grid.slice(20, 21)
-                         </span>
-                         <span class="col-xs-1">
-                         @grid.slice(21, 24)
-                         </span>
-                         <span id="field6" class="grid col-xs-1">
-                         @grid.slice(24, 25)
-                         </span>
-                         <span class="col-xs-1">
-                         @grid.slice(25, 27)
-                         </span>
-                     </div>
-                     <div>
-                         <span class="col-xs-1">
-                         @grid.slice(28, 32)
-                         </span>
-                         <span id="field7" class="grid col-xs-1">
-                         @grid.slice(32, 33)
-                         </span>
-                         <span class="col-xs-1">
-                         @grid.slice(33, 34)
-                         </span>
-                         <span id="field8" class="grid col-xs-1">
-                         @grid.slice(34, 35)
-                         </span>
-                         <span class="col-xs-1">
-                         @grid.slice(35, 36)
-                         </span>
-                         <span id="field9" class="grid col-xs-1">
-                         @grid.slice(36, 37)
-                         </span>
-                         <span class="col-xs-1">
-                         @grid.slice(37, 41)
-                         </span>
-                     </div>
-                     <div>
-                         <span class="grid row_middel">
-                             <span id="field10" class="grid col-xs-1">
-                             @grid.slice(42, 43)
-                             </span>
-                             <span class="col-xs-1">
-                             @grid.slice(43, 44)
-                             </span>
-                             <span id="field11" class="grid col-xs-1">
-                             @grid.slice(44, 45)
-                             </span>
-                             <span class="col-xs-1">
-                             @grid.slice(45, 46)
-                             </span>
-                             <span id="field12" class="grid col-xs-1">
-                             @grid.slice(46, 47)
-                             </span> &nbsp;
-                             <span id="field13" class="grid col-xs-1">
-                             @grid.slice(50, 51)
-                             </span>
-                             <span class="col-xs-1">
-                             @grid.slice(51, 52)
-                             </span>
-                             <span id="field14" class="grid col-xs-1">
-                             @grid.slice(52, 53)
-                             </span>
-                             <span class="col-xs-1">
-                             @grid.slice(53, 54)
-                             </span>
-                             <span id="field15" class="grid col-xs-1">
-                             @grid.slice(54, 55)
-                             </span>
-                         </span>
-                     </div>
-                     <div>
-                         <span class="col-xs-1">
-                         @grid.slice(56, 60)
-                         </span>
-                         <span id="field16" class="grid col-xs-1">
-                         @grid.slice(60, 61)
-                         </span>
-                         <span class="col-xs-1">
-                         @grid.slice(61, 62)
-                         </span>
-                         <span id="field17" class="grid col-xs-1">
-                         @grid.slice(62, 63)
-                         </span>
-                         <span class="col-xs-1">
-                         @grid.slice(63, 64)
-                         </span>
-                         <span id="field18" class="grid col-xs-1">
-                         @grid.slice(64, 65)
-                         </span>
-                         <span class="col-xs-1">
-                         @grid.slice(65, 69)
-                         </span>
-                     </div>
-                     <div>
-                         <span class="col-xs-1">
-                         @grid.slice(70, 72)
-                         </span>
-                         <span id="field19" class="grid col-xs-1">
-                         @grid.slice(72, 73)
-                         </span>
-                         <span class="col-xs-1">
-                         @grid.slice(73, 76)
-                         </span>
-                         <span id="field20" class="grid col-xs-1">
-                         @grid.slice(76, 77)
-                         </span>
-                         <span class="col-xs-1">
-                         @grid.slice(77, 80)
-                         </span>
-                         <span id="field21" class="grid col-xs-1">
-                         @grid.slice(80, 81)
-                         </span>
-                         <span class="col-xs-1">
-                         @grid.slice(81, 83)
-                         </span>
-                     </div>
-                     <div>
-                         <span id="field22" class="grid col-xs-1">
-                         @grid.slice(84, 85)
-                         </span>
-                         <span class="col-xs-1">
-                         @grid.slice(85, 90)
-                         </span>
-                         <span id="field23" class="grid col-xs-1">
-                         @grid.slice(90, 91)
-                         </span>
-                         <span class="col-xs-1">
-                         @grid.slice(91, 96)
-                         </span>
-                         <span id="field24" class="grid col-xs-1">
-                         @grid.slice(96, 97)
-                         </span>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
-    </div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+<script src="@routes.Assets.versioned("javascripts/muehle.js")" ></script>
+<script src="@routes.Assets.versioned("javascripts/gameApp.js")" ></script>
+<link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/stylesheet.css")" >
+
 }
