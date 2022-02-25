@@ -8,15 +8,6 @@
        margin-left: 80px;
 }
 
-.imagesBackground {
-    position: fixed;
-    top: 0;
-    down: 0;
-    left: 0;
-    z-index: -100;
-    opacity: 20%;
-}
-
 textarea {
     width : 100px; min-height : 70px;
 }
