@@ -1,4 +1,14 @@
 let csrf = $('input[name="csrfToken"]').attr("name");
+let json;
+
+setTimeout(function () {
+    $('.loaded_after_5sec').show();
+}, 5000);
+
+setTimeout(function () {
+    $('.loading').hide();
+}, 5000);
+
 
 $.ajaxSetup({
     headers: {
@@ -7,6 +17,10 @@ $.ajaxSetup({
         //'Accept': 'application/json'
     }
 });
+
+function updateGrid() {
+    window.location.href = '/game'
+}
 
 function place(i) {
     const field = $(`#field${i + 1}`);
@@ -17,7 +31,6 @@ function place(i) {
                 url: '/game/' + i,
                 dataType: "json",
             });
-            window.location.href = '/game';
         })
     } else {
         throw Error('Selected Field is unavailable');
@@ -36,7 +49,6 @@ function move(i,j) {
                     dataType: "json",
                 });
             });
-            window.location.href = '/game';
         })
     }
 }
@@ -50,7 +62,6 @@ function remove(i) {
                 url: '/remove/' + i,
                 dataType: "json",
             });
-            window.location.href = '/game';
         })
     } else {
         throw Error('Field does not contain removable stone');
@@ -64,7 +75,6 @@ function init_Buttons() {
             url: '/new',
             dataType: "json",
         });
-        window.location.href = '/game';
     });
 
     $(`#undo`).click(function () {
@@ -73,7 +83,6 @@ function init_Buttons() {
             url: '/undo',
             dataType: "json",
         });
-        window.location.href = '/game';
     });
 
     $(`#redo`).click(function () {
@@ -82,16 +91,14 @@ function init_Buttons() {
             url: '/redo',
             dataType: "json",
         });
-        window.location.href = '/game';
     });
 
     $(`#save`).click(function () {
         $.ajax({
-            method: "POST",
+            method: "GET",
             url: '/save',
             dataType: "json",
         });
-        window.location.href = '/game';
     });
 
     $(`#load`).click(function () {
@@ -100,7 +107,6 @@ function init_Buttons() {
             url: '/load',
             dataType: "json",
         });
-        window.location.href = '/game';
     })
 }
 
@@ -131,9 +137,64 @@ function init_Game() {
     })
 }
 
+function connectWebSocket() {
+    const websocket = new WebSocket("ws://localhost:9000/websocket");
+    websocket.setTimeout;
+
+    websocket.onopen = function(event) {
+        console.log('Connected to Websocket');
+    };
+
+    websocket.onclose = function () {
+        console.log('Connection with Websocket Closed!');
+    };
+
+    websocket.onerror = function (error) {
+        console.log('Error in Websocket occurred: ' + error);
+    };
+
+    websocket.onmessage = function (e) {
+        if (typeof e.data === "string") {
+            json = JSON.parse(e.data);
+            updateGrid();
+            for (let i = 1; i <= 24; i++) {
+                $(`field${i}`).clickEvent = place(i-1);
+            }
+            init_Buttons()
+        }
+    };
+}
+
+function changeColor()
+{
+    $('#l6DnU6HXv').on("click", function() {
+        $('#l6DnU6HXv').css({ fill: "#000000" });
+    });
+
+    $('#b2ErXBqKt7').on("click", function() {
+        $('#b2ErXBqKt7').css({ fill: "#ffaa11" });
+    });
+
+    $('#a4uE0zCMG1').on("click", function() {
+        $('#a4uE0zCMG1').css({ fill: "#ffaa11" });
+    });
+
+    $('#c4w1PI0rF0').on("click", function() {
+        $('#c4w1PI0rF0').css({ fill: "#000000" });
+    });
+
+    $('#a1yjNcWntD').on("click", function() {
+        $('#a1yjNcWntD').css({ fill: "#000000" });
+    });
+}
+
 $(document).ready(function () {
     loadJson();
-})  ;
+    connectWebSocket();
+    changeColor();
+    $(".loading").show();
+    $(".loaded_after_5sec").hide();
+}) ;
 
 $(document).ready(function () {
 
