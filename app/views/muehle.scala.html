@@ -15,7 +15,7 @@ controller.status
           <div class="text-center">
               <div class="buttons mt-5">
                <div class="btn-group col mb-3" role="group">
-                   <a href="/" <i class="btn btn-default"></i>Rules <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-question-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                   <a href="/"<i class="btn btn-default"></i>Rules <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-question-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
                </svg> </a>
@@ -51,94 +51,179 @@ controller.status
 </div>
 
 <div class="container">
-<div class="row">
-    <div class="col">
-        <div class="col">
-            <div class="gamecontainer col">
-                <div>
+<div class="row mt-4"></div>
+    <div class="row">
+        <div class="col col-xs-12">
+            <div class="col-md-12 mt-2">
+                <div class="gamecontainer col-md-12">
+                    <div>
                         <span class="status">
                         @status
                         </span>
-                </div>
-                <div>
-                        <span class="grid col">
-                        @grid.slice(0, 13)
+                    </div>
+                    <div>
+                        <span id="field1" class="grid col-xs-1">
+                        @grid.slice(0, 1)
                         </span>
-                </div>
-                <div>
-                        <span class="grid">
-                        @grid.slice(14, 27)
+                        <span class="col-xs-1">
+                        @grid.slice(1, 6)
                         </span>
-                </div>
-                <div>
-                        <span class="grid">
-                        @grid.slice(28, 41)
+                        <span id="field2" class="grid col-xs-1">
+                        @grid.slice(6, 7)
                         </span>
-                </div>
-                <div>
+                        <span class="col-xs-1">
+                        @grid.slice(7, 12)
+                        </span>
+                        <span id="field3" class="grid col-xs-1">
+                        @grid.slice(12, 13)
+                        </span>
+                    </div>
+                    <div>
+                        <span class="col-xs-1">
+                        @grid.slice(14, 16)
+                        </span>
+                        <span id="field4" class="grid col-xs-1">
+                        @grid.slice(16, 17)
+                        </span>
+                        <span class="col-xs-1">
+                        @grid.slice(17, 20)
+                        </span>
+                        <span id="field5" class="grid col-xs-1">
+                        @grid.slice(20, 21)
+                        </span>
+                        <span class="col-xs-1">
+                        @grid.slice(21, 24)
+                        </span>
+                        <span id="field6" class="grid col-xs-1">
+                        @grid.slice(24, 25)
+                        </span>
+                        <span class="col-xs-1">
+                        @grid.slice(25, 27)
+                        </span>
+                    </div>
+                    <div>
+                        <span class="col-xs-1">
+                        @grid.slice(28, 32)
+                        </span>
+                        <span id="field7" class="grid col-xs-1">
+                        @grid.slice(32, 33)
+                        </span>
+                        <span class="col-xs-1">
+                        @grid.slice(33, 34)
+                        </span>
+                        <span id="field8" class="grid col-xs-1">
+                        @grid.slice(34, 35)
+                        </span>
+                        <span class="col-xs-1">
+                        @grid.slice(35, 36)
+                        </span>
+                        <span id="field9" class="grid col-xs-1">
+                        @grid.slice(36, 37)
+                        </span>
+                        <span class="col-xs-1">
+                        @grid.slice(37, 41)
+                        </span>
+                    </div>
+                    <div>
                         <span class="grid row_middel">
-                            @grid.slice(42, 47)
-                                &nbsp;
-                            @grid.slice(50, 55)
+                            <span id="field10" class="grid col-xs-1">
+                            @grid.slice(42, 43)
+                            </span>
+                            <span class="col-xs-1">
+                            @grid.slice(43, 44)
+                            </span>
+                            <span id="field11" class="grid col-xs-1">
+                            @grid.slice(44, 45)
+                            </span>
+                            <span class="col-xs-1">
+                            @grid.slice(45, 46)
+                            </span>
+                            <span id="field12" class="grid col-xs-1">
+                            @grid.slice(46, 47)
+                            </span> &nbsp;
+                            <span id="field13" class="grid col-xs-1">
+                            @grid.slice(50, 51)
+                            </span>
+                            <span class="col-xs-1">
+                            @grid.slice(51, 52)
+                            </span>
+                            <span id="field14" class="grid col-xs-1">
+                            @grid.slice(52, 53)
+                            </span>
+                            <span class="col-xs-1">
+                            @grid.slice(53, 54)
+                            </span>
+                            <span id="field15" class="grid col-xs-1">
+                            @grid.slice(54, 55)
+                            </span>
                         </span>
-                </div>
-                <div>
-                        <span class="grid">
-                        @grid.slice(56, 69)
+                    </div>
+                    <div>
+                        <span class="col-xs-1">
+                        @grid.slice(56, 60)
                         </span>
-                </div>
-                <div>
-                        <span>
-                        @grid.slice(70, 83)
+                        <span id="field16" class="grid col-xs-1">
+                        @grid.slice(60, 61)
                         </span>
-                </div>
-                <div>
-                        <span>
-                        @grid.slice(84, 97)
+                        <span class="col-xs-1">
+                        @grid.slice(61, 62)
                         </span>
+                        <span id="field17" class="grid col-xs-1">
+                        @grid.slice(62, 63)
+                        </span>
+                        <span class="col-xs-1">
+                        @grid.slice(63, 64)
+                        </span>
+                        <span id="field18" class="grid col-xs-1">
+                        @grid.slice(64, 65)
+                        </span>
+                        <span class="col-xs-1">
+                        @grid.slice(65, 69)
+                        </span>
+                    </div>
+                    <div>
+                        <span class="col-xs-1">
+                        @grid.slice(70, 72)
+                        </span>
+                        <span id="field19" class="grid col-xs-1">
+                        @grid.slice(72, 73)
+                        </span>
+                        <span class="col-xs-1">
+                        @grid.slice(73, 76)
+                        </span>
+                        <span id="field20" class="grid col-xs-1">
+                        @grid.slice(76, 77)
+                        </span>
+                        <span class="col-xs-1">
+                        @grid.slice(77, 80)
+                        </span>
+                        <span id="field21" class="grid col-xs-1">
+                        @grid.slice(80, 81)
+                        </span>
+                        <span class="col-xs-1">
+                        @grid.slice(81, 83)
+                        </span>
+                    </div>
+                    <div>
+                        <span id="field22" class="grid col-xs-1">
+                        @grid.slice(84, 85)
+                        </span>
+                        <span class="col-xs-1">
+                        @grid.slice(85, 90)
+                        </span>
+                        <span id="field23" class="grid col-xs-1">
+                        @grid.slice(90, 91)
+                        </span>
+                        <span class="col-xs-1">
+                        @grid.slice(91, 96)
+                        </span>
+                        <span id="field24" class="grid col-xs-1">
+                        @grid.slice(96, 97)
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="col">
-        <div class="buttons mt-5">
-            <div class="btn-group col mb-4" role="group">
-                <a href="/game/0" class="btn btn-outline-dark col-md-3"> 1</a>
-                <a href="/game/1" class="btn btn-outline-dark col-md-3"> 2</a>
-                <a href="/game/2" class="btn btn-outline-dark col-md-3"> 3</a>
-                <a href="/game/3" class="btn btn-outline-dark col-md-3"> 4</a>
-            </div>
-            <div class="btn-group col mb-4" role="group">
-                <a href="/game/4" class="btn btn-outline-dark col-md-3"> 5</a>
-                <a href="/game/5" class="btn btn-outline-dark col-md-3"> 6</a>
-                <a href="/game/6" class="btn btn-outline-dark col-md-3"> 7</a>
-                <a href="/game/7" class="btn btn-outline-dark col-md-3"> 8</a>
-            </div>
-            <div class="btn-group col mb-4" role="group">
-                <a href="/game/8" class="btn btn-outline-dark col-md-3"> 9</a>
-                <a href="/game/9" class="btn btn-outline-dark col-md-3">10</a>
-                <a href="/game/10" class="btn btn-outline-dark col-md-3">11</a>
-                <a href="/game/11" class="btn btn-outline-dark col-md-3">12</a>
-            </div>
-            <div class="btn-group col mb-4" role="group">
-                <a href="/game/12" class="btn btn-outline-dark col-md-3">13</a>
-                <a href="/game/13" class="btn btn-outline-dark col-md-3">14</a>
-                <a href="/game/14" class="btn btn-outline-dark col-md-3">15</a>
-                <a href="/game/15" class="btn btn-outline-dark col-md-3">16</a>
-            </div>
-            <div class="btn-group col mb-4" role="group">
-                <a href="/game/16" class="btn btn-outline-dark col-md-3">17</a>
-                <a href="/game/17" class="btn btn-outline-dark col-md-3">18</a>
-                <a href="/game/18" class="btn btn-outline-dark col-md-3">19</a>
-                <a href="/game/19" class="btn btn-outline-dark col-md-3">20</a>
-            </div>
-            <div class="btn-group col mb-4" role="group">
-                <a href="/game/20" class="btn btn-outline-dark col-md-3">21</a>
-                <a href="/game/21" class="btn btn-outline-dark col-md-3">22</a>
-                <a href="/game/22" class="btn btn-outline-dark col-md-3">23</a>
-                <a href="/game/23" class="btn btn-outline-dark col-md-3">24</a>
-            </div>
-        </div>
-    </div>
+</div>
 }
